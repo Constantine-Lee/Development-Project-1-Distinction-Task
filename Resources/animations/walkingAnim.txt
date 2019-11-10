@@ -1,0 +1,12 @@
+SwinGame Animation #v1
+
+m:[0-3],[0-3],3,
+m:[4-7],[4-7],3,
+m:[8-11],[8-11],3,
+m:[12-15],[12-15],3,
+
+//identifiers
+i:WalkFront,0
+i:WalkLeft,4
+i:WalkRight,8
+i:WalkBack,12

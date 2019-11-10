@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGame", "MyGame.csproj", "{871B5A90-103A-46A5-BBB9-07C02B9851D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{F174B971-0326-4DA7-9695-42B9D4672453}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Debug-Mac|Any CPU = Debug-Mac|Any CPU
+		Debug-Mac|x86 = Debug-Mac|x86
+		Debug-Unix|Any CPU = Debug-Unix|Any CPU
+		Debug-Unix|x86 = Debug-Unix|x86
+		Debug-Windows|Any CPU = Debug-Windows|Any CPU
+		Debug-Windows|x86 = Debug-Windows|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug|Any CPU.ActiveCfg = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug|Any CPU.Build.0 = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug|x86.ActiveCfg = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug|x86.Build.0 = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug-Mac|Any CPU.ActiveCfg = Debug-Mac|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug-Mac|x86.ActiveCfg = Debug-Mac|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug-Mac|x86.Build.0 = Debug-Mac|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug-Unix|Any CPU.ActiveCfg = Debug-Unix|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug-Unix|x86.ActiveCfg = Debug-Unix|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug-Unix|x86.Build.0 = Debug-Unix|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug-Windows|Any CPU.ActiveCfg = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug-Windows|x86.ActiveCfg = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Debug-Windows|x86.Build.0 = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Release|Any CPU.ActiveCfg = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Release|Any CPU.Build.0 = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Release|x86.ActiveCfg = Debug-Windows|x86
+		{871B5A90-103A-46A5-BBB9-07C02B9851D1}.Release|x86.Build.0 = Debug-Windows|x86
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug|x86.Build.0 = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Mac|Any CPU.ActiveCfg = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Mac|Any CPU.Build.0 = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Mac|x86.ActiveCfg = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Mac|x86.Build.0 = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Unix|Any CPU.ActiveCfg = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Unix|Any CPU.Build.0 = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Unix|x86.ActiveCfg = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Unix|x86.Build.0 = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Windows|Any CPU.ActiveCfg = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Windows|Any CPU.Build.0 = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Windows|x86.ActiveCfg = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Debug-Windows|x86.Build.0 = Debug|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Release|x86.ActiveCfg = Release|Any CPU
+		{F174B971-0326-4DA7-9695-42B9D4672453}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43C2936F-082F-40B4-98D4-6351436EC335}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MyGame.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.PropertyBraceStyle = NextLine
+		$3.PropertyGetBraceStyle = NextLine
+		$3.PropertySetBraceStyle = NextLine
+		$3.EventBraceStyle = NextLine
+		$3.EventAddBraceStyle = NextLine
+		$3.EventRemoveBraceStyle = NextLine
+		$3.StatementBraceStyle = NextLine
+		$3.ElseNewLinePlacement = NewLine
+		$3.CatchNewLinePlacement = NewLine
+		$3.FinallyNewLinePlacement = NewLine
+		$3.AfterDelegateDeclarationParameterComma = True
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal
