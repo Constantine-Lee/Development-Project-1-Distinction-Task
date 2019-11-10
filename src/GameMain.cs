@@ -7,7 +7,7 @@ namespace MyGame
 	{
 		public static void Main ()
 		{
-			ViewManager _viewManager = new ViewManager ();
+            ViewManager _viewManager = ViewManager.getInstance();
 			_viewManager.SetX (0);
 			_viewManager.SetY (0);
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('packages\NUnit.3.12.0\build\NUnit.props')" />
   <PropertyGroup>
@@ -69,21 +69,24 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="src\" />
-    <Folder Include="Resources\" />
-    <Folder Include="Menu\" />
-    <Folder Include="Game\" />
-    <Folder Include="Game\BottomBar\" />
-    <Folder Include="Game\SideBar\" />
-    <Folder Include="End\" />
-    <Folder Include="Game\Serving Area\" />
-    <Folder Include="Game\Serving Area\Stove\" />
-    <Folder Include="Game\Serving Area\Player\" />
-    <Folder Include="Game\Serving Area\DiningTable\" />
-    <Folder Include="Game\Serving Area\Customer\" />
-    <Folder Include="Instruction\" />
+    <Content Include="Resources\images\Border_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\images\Border_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\images\Health_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\images\Health_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game\EasyMode.cs" />
+    <Compile Include="Game\MediumMode.cs" />
+    <Compile Include="Game\SideBar\EasyModeSideBar.cs" />
+    <Compile Include="Game\SideBar\SideBarInterface.cs" />
     <Compile Include="src\GameMain.cs" />
     <Compile Include="Menu\Menu.cs" />
     <Compile Include="Menu\Button.cs" />

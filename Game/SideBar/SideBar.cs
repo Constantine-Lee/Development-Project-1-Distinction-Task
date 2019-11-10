@@ -3,7 +3,7 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class SideBar
+	public class SideBar: SideBarInterface
 	{
 		private Sprite _sideBar;
 		private GameLife _gameLife;

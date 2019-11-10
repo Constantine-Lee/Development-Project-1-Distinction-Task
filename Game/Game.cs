@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MyGame
 {
-	public class Game: View
+    public class Game : View
 	{
 		private ServingArea _servingArea;
 		private SideBar _sideBar;

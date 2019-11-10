@@ -13,9 +13,11 @@ namespace MyGame
 		private Timer _gameTime;
 		private int _ticks;
 		private bool _waiting;
-
+        
 		private Customer _customer;
-		private SideBar _sideBar;
+		private SideBarInterface _sideBar;
+
+        public static int sSPEED;
 
 		public DiningTable ()
 		{
@@ -71,7 +73,7 @@ namespace MyGame
 
 
 		// register side bar to show decreased game life
-		public void RegisterSideBar (SideBar sideBar)
+		public void RegisterSideBar (SideBarInterface sideBar)
 		{
 			_sideBar = sideBar;
 		}
@@ -112,7 +114,7 @@ namespace MyGame
 		{
 			if (_waiting) {
 				//keep add time and increase the bar if the customer is waiting
-				if (SwinGame.TimerTicks (_gameTime) > 700) {
+				if (SwinGame.TimerTicks (_gameTime) > sSPEED) {
 					_ticks = _ticks + 1;
 					SwinGame.ResetTimer (_gameTime);
 				}
