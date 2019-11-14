@@ -3,13 +3,13 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class StatusBar
+	public class ZYStatusBar
 	{
 		private Bitmap _fullBar;
 		private Rectangle _partRect;
 		private Sprite _statusBar;
 
-		public StatusBar (string emptyBar)
+		public ZYStatusBar (string emptyBar)
 		{
 			SwinGame.LoadBitmapNamed (emptyBar, emptyBar);
 			_statusBar = SwinGame.CreateSprite (SwinGame.BitmapNamed (emptyBar));

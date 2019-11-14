@@ -3,19 +3,19 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class Customer
+	public class ZYCustomer
 	{
 		private Sprite _customer;
-		private Wish _wish;
+		private ZYWish _wish;
 
-		public Customer (string image)
+		public ZYCustomer (string image)
 		{
 			//customer sprite
 			SwinGame.LoadBitmapNamed (image, image);
 			_customer = SwinGame.CreateSprite (SwinGame.BitmapNamed (image));
 			//
 			//get new wish from Wish Generator
-			_wish = WishGenerator.NewWish ();
+			_wish = ZYWishGenerator.NewWish ();
 		}
 
 		//c1 = 25, c2 = 110, c3 = 195, c4 = 280

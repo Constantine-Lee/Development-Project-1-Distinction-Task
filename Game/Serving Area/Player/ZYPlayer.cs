@@ -8,12 +8,12 @@ namespace MyGame
 		private Sprite _player;
 		private string _holdingFoodName;
 
-		private Movement _movement;
-		private HoldingFoodFrame _holdingFoodFrame;
+		private ZYMovement _movement;
+		private ZYHoldingFoodFrame _holdingFoodFrame;
 
 		public Player ()
 		{
-			_movement = new Movement ();
+			_movement = new ZYMovement ();
 			_holdingFoodName = "";
 			_player = SwinGame.CreateSprite (SwinGame.BitmapNamed ("Player"), SwinGame.AnimationScriptNamed ("WalkingScript"));
 		}
@@ -40,7 +40,7 @@ namespace MyGame
 			set {_holdingFoodName = value;}
 		}
 
-		public Movement Movement {
+		public ZYMovement Movement {
 			get {return _movement;}
 			set {_movement = value;}
 		}
@@ -77,7 +77,7 @@ namespace MyGame
 			}
 		}
 
-		public void RegisterHoldingFrame (HoldingFoodFrame holdingFoodFrame)
+		public void RegisterHoldingFrame (ZYHoldingFoodFrame holdingFoodFrame)
 		{
 			_holdingFoodFrame = holdingFoodFrame;
 		}

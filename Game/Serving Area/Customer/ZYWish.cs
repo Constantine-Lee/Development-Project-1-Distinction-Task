@@ -3,14 +3,14 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class Wish
+	public class ZYWish
 	{
 		private Sprite _wishBackground;
 		private Sprite _wishFood;
 		private string _wishName;
 		private Sprite _love;
 
-		public Wish (string wishName)
+		public ZYWish (string wishName)
 		{
 			//to show gratitude
 			SwinGame.LoadBitmapNamed ("love", "love.png");

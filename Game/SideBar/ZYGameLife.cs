@@ -3,13 +3,13 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class GameLife
+	public class ZYGameLife
 	{
 		private Bitmap _fullBar;
 		private Rectangle _partRect;
 		private int _width;
 
-		public GameLife ()
+		public ZYGameLife ()
 		{
 			_width = 100;
 			SwinGame.LoadBitmapNamed ("emptyHeart", "EmptyHeart.png");

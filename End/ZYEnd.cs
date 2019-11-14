@@ -3,13 +3,13 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class End: View
+	public class ZYEnd: View
 	{
 		private string _image;
-		private Button _gotoMenuButton;
+		private ZYButton _gotoMenuButton;
 		private Sprite _menu;
 
-		public End (ViewManager viewManager): base(viewManager)
+		public ZYEnd (ViewManager viewManager): base(viewManager)
 		{
 			//background Image
 			_image = "game_over.jpg";
@@ -18,7 +18,7 @@ namespace MyGame
 			//
 
 			//Go to menu
-			_gotoMenuButton = new Button ("grey_button06.png");
+			_gotoMenuButton = new ZYButton ("grey_button06.png");
 			_gotoMenuButton.SetWidth (191);
 			_gotoMenuButton.SetHeight (49);
 			_gotoMenuButton.SetText ("-Back to Menu-",25);
@@ -29,7 +29,7 @@ namespace MyGame
 		{
 			SwinGame.DrawSprite (_menu);
 			SwinGame.DrawText ("Game Over!", Color.Black, "Arial", 35, 280, 50);
-			SwinGame.DrawText ("Score :" + SideBar.Ticks, Color.Black, "Arial", 35, 280, 90);
+			SwinGame.DrawText ("Score :" + ZYSideBar.Ticks, Color.Black, "Arial", 35, 280, 90);
 			_gotoMenuButton.Draw ();
 		}
 

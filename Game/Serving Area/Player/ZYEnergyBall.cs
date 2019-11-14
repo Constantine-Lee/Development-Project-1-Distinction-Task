@@ -3,13 +3,13 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class EnergyBall
+	public class ZYEnergyBall
 	{
 		private Sprite _energyBall;
 		private string _energyImage;
 		private static Random _random = new Random ();
 
-		public EnergyBall ()
+		public ZYEnergyBall ()
 		{
 			_energyImage = "ball.png";
 			SwinGame.LoadBitmapNamed (_energyImage, _energyImage);

@@ -3,14 +3,14 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class SampleFood
+	public class ZYSampleFood
 	{
 		private int _width, _height;
 		private string _foodImage;
 		private Sprite _food;
 		private bool _selected;
 
-		public SampleFood (string foodImage)
+		public ZYSampleFood (string foodImage)
 		{
 			_width = 88;
 			_height = 48;

@@ -3,22 +3,22 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class SideBar: SideBarInterface
+	public class ZYSideBar: ZYSideBarInterface
 	{
 		private Sprite _sideBar;
-		private GameLife _gameLife;
+		private ZYGameLife _gameLife;
 		private static int _life;
 
-		private HoldingFoodFrame _holdingFoodFrame;
+		private ZYHoldingFoodFrame _holdingFoodFrame;
 
 		private Timer _gameTime;
 		private static uint _ticks;
 
 		private ViewManager _viewManager;
 
-		public SideBar (ViewManager viewManager)
+		public ZYSideBar (ViewManager viewManager)
 		{
-			_holdingFoodFrame = new HoldingFoodFrame ();
+			_holdingFoodFrame = new ZYHoldingFoodFrame ();
 
 			_viewManager = viewManager;
 
@@ -26,7 +26,7 @@ namespace MyGame
 			SwinGame.StartTimer (_gameTime);
 
 			_life = 6;
-			_gameLife = new GameLife ();
+			_gameLife = new ZYGameLife ();
 
 			SwinGame.LoadBitmapNamed ("side", "side_menu.png");
 			_sideBar = SwinGame.CreateSprite (SwinGame.BitmapNamed ("side"));
@@ -38,7 +38,7 @@ namespace MyGame
 			SwinGame.SpriteSetX (_sideBar, x);
 		}
 
-		public HoldingFoodFrame HoldingFoodFrame {
+		public ZYHoldingFoodFrame HoldingFoodFrame {
 			get { return _holdingFoodFrame; }
 			set { _holdingFoodFrame = value; }
 		}
@@ -66,7 +66,7 @@ namespace MyGame
 		public void ProcessEvent ()
 		{
 			if (_life <= 0) {
-				_viewManager.View = _viewManager.End;
+				_viewManager.View = _viewManager.ZYEnd;
 			}
 		}
 

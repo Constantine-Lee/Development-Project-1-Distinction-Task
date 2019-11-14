@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace MyGame
 {
-	public class ServingArea
+	public class ZYServingArea
 	{
 		private Timer _gameTime;
 
-		private EnergyBall _energyPotion;
+		private ZYEnergyBall _energyPotion;
 
 		private Sprite _sky;
 		private Sprite _floor;
@@ -16,46 +16,46 @@ namespace MyGame
 
 		private Player _player;
 
-		private TableOfStove [] _tableOfStoves;
-		private DiningTable [] _diningTables;
+		private ZYTableOfStove [] _tableOfStoves;
+		private ZYDiningTable [] _diningTables;
 
-		private DiningTableManager _diningTableManager;
-		private StoveManager _stoveManager;
+		private ZYDiningTableManager _diningTableManager;
+		private ZYStoveManager _stoveManager;
 
-		Stove [] _stove;
+		ZYStove [] _stove;
 
 		private static Random _random = new Random ();
 
-		public ServingArea ()
+		public ZYServingArea ()
 		{
 			_gameTime = SwinGame.CreateTimer ();
 
 			// Random the first energy potion
-			_energyPotion = new EnergyBall ();
+			_energyPotion = new ZYEnergyBall ();
 			_energyPotion.SetX (_random.Next (10, 340));
 			_energyPotion.SetY (_random.Next (115, 190));
 			//
 
 			// STOVE
 			//2 table of stove
-			_tableOfStoves = new TableOfStove [2];
-			_tableOfStoves [0] = new TableOfStove ();
-			_tableOfStoves [1] = new TableOfStove ();
+			_tableOfStoves = new ZYTableOfStove [2];
+			_tableOfStoves [0] = new ZYTableOfStove ();
+			_tableOfStoves [1] = new ZYTableOfStove ();
 			//
 			//2 stove and bind corresponding table to it 
-			_stove = new Stove [2];
-			_stove [0] = new Stove (_tableOfStoves [0]);
-			_stove [1] = new Stove (_tableOfStoves [1]);
+			_stove = new ZYStove [2];
+			_stove [0] = new ZYStove (_tableOfStoves [0]);
+			_stove [1] = new ZYStove (_tableOfStoves [1]);
 
-			_stoveManager = new StoveManager (_stove);
+			_stoveManager = new ZYStoveManager (_stove);
 			//
 
 			// 4 Dining Tables
-			_diningTables = new WoodenTable [4];
+			_diningTables = new ZYWoodenTable [4];
 			for (int i = 0; i < 4; i++) {
-				_diningTables [i] = new WoodenTable ();
+				_diningTables [i] = new ZYWoodenTable ();
 			}
-			_diningTableManager = new DiningTableManager (_diningTables);
+			_diningTableManager = new ZYDiningTableManager (_diningTables);
 			//
 
 			// 
@@ -98,7 +98,7 @@ namespace MyGame
 			SwinGame.SpriteSetY (_dustbin, y + 210);
 		}
 
-		public Stove [] Stoves {
+		public ZYStove [] Stoves {
 			get { return _stove; }
 			set { _stove = value; }
 		}
@@ -108,7 +108,7 @@ namespace MyGame
 			set { _player = value; }
 		}
 
-		public DiningTable [] DiningTable {
+		public ZYDiningTable [] DiningTable {
 			get { return _diningTables; }
 			set { _diningTables = value; }
 		}
@@ -145,7 +145,7 @@ namespace MyGame
 		public void CheckCollision ()
 		{
 			//check collision between table of stove and player. If collision happen, give the player the food if food exist. 
-			foreach (TableOfStove tableOfStove in _tableOfStoves) {
+			foreach (ZYTableOfStove tableOfStove in _tableOfStoves) {
 				if (SwinGame.SpriteCollision (_player.PlayerSprite, tableOfStove.FoodSprite) && (_player.HoldingFoodName == "")) {
 					SwinGame.DrawText ("small_" + _player.HoldingFoodName, Color.Black, 10, 10);
 					if (tableOfStove.FoodName == "small_BlueCandy.png") {
@@ -160,7 +160,7 @@ namespace MyGame
 			}
 
 			//check collision between dining table and player. If the wish food match with the food hold by player, give the food to the customer. 
-			foreach (DiningTable diningTable in _diningTables) {
+			foreach (ZYDiningTable diningTable in _diningTables) {
 				if (SwinGame.SpriteCollision (_player.PlayerSprite, diningTable.Customer.CustomerSprite)) {
 					if (("small_" + _player.HoldingFoodName) == diningTable.Customer.WishName) {
 						diningTable.SetFood (diningTable.Customer.WishName);

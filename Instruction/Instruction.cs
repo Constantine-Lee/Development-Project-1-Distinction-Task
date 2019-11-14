@@ -6,7 +6,7 @@ namespace MyGame
 	public class Instruction: View
 	{
 		private string _image;
-		private Button _gotoMenuButton;
+		private ZYButton _gotoMenuButton;
 		private Sprite _menu;
 
 		public Instruction(ViewManager viewManager): base(viewManager)
@@ -18,7 +18,7 @@ namespace MyGame
 			//
 
 			//Go to menu
-			_gotoMenuButton = new Button ("grey_button06.png");
+			_gotoMenuButton = new ZYButton ("grey_button06.png");
 			_gotoMenuButton.SetWidth (191);
 			_gotoMenuButton.SetHeight (49);
 			_gotoMenuButton.SetText (" Back to Menu ", 25);

@@ -3,11 +3,11 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class StoveManager
+	public class ZYStoveManager
 	{
-		private Stove [] _stove;
+		private ZYStove [] _stove;
 
-		public StoveManager (Stove [] stove)
+		public ZYStoveManager (ZYStove [] stove)
 		{
 			_stove = stove;
 		}
@@ -31,7 +31,7 @@ namespace MyGame
 
 		public void Draw ()
 		{
-			foreach (Stove stove in _stove) {
+			foreach (ZYStove stove in _stove) {
 				stove.Draw ();
 			}
 		}

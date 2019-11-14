@@ -3,11 +3,11 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class DiningTableManager
+	public class ZYDiningTableManager
 	{
-		private DiningTable [] _diningTable;
+		private ZYDiningTable [] _diningTable;
 
-		public DiningTableManager (DiningTable [] diningTable)
+		public ZYDiningTableManager (ZYDiningTable [] diningTable)
 		{
 			_diningTable = diningTable;
 		}
@@ -30,14 +30,14 @@ namespace MyGame
 
 		public void Draw ()
 		{
-			foreach (DiningTable servingTable in _diningTable) {
+			foreach (ZYDiningTable servingTable in _diningTable) {
 				servingTable.Draw ();
 			}
 		}
 
 		public void ProcessEvent ()
 		{
-			foreach (DiningTable diningTable in _diningTable) {
+			foreach (ZYDiningTable diningTable in _diningTable) {
 				diningTable.ProcessEvent ();
 			}
 		}

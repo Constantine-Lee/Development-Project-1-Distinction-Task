@@ -3,14 +3,14 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class Movement
+	public class ZYMovement
 	{
 		private double _speed;
-		private StatusBar _statusBar;
+		private ZYStatusBar _statusBar;
 		private Timer _gameTime;
 		private int _ticks;
 
-		public Movement ()
+		public ZYMovement ()
 		{
 			_speed = 1;
 			_ticks = 60;
@@ -18,7 +18,7 @@ namespace MyGame
 			_gameTime = SwinGame.CreateTimer ();
 			SwinGame.StartTimer (_gameTime);
 
-			_statusBar = new StatusBar ("hb_01c.png");
+			_statusBar = new ZYStatusBar ("hb_01c.png");
 			_statusBar.SetFillingImage ("hb_01b.png");
 		}
 

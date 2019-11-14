@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MyGame
 {
-    public interface SideBarInterface
+    public interface ZYSideBarInterface
     {
 
         void DecreaseGameLife();

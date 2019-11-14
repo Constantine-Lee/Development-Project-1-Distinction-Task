@@ -3,23 +3,23 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class DiningTable
+	public class ZYDiningTable
 	{
 		private Sprite _diningTable;
 		private Sprite _food;
 
-		private StatusBar _statusBar;
+		private ZYStatusBar _statusBar;
 
 		private Timer _gameTime;
 		private int _ticks;
 		private bool _waiting;
         
-		private Customer _customer;
-		private SideBarInterface _sideBar;
+		private ZYCustomer _customer;
+		private ZYSideBarInterface _sideBar;
 
         public static int sSPEED;
 
-		public DiningTable ()
+		public ZYDiningTable ()
 		{
 			//Dining Table
 			SwinGame.LoadBitmapNamed ("diningTable.png", "diningTable.png");
@@ -30,7 +30,7 @@ namespace MyGame
 			_food = SwinGame.CreateSprite (SwinGame.BitmapNamed (""));
 
 			//get a new customer
-			_customer = PokemonCustomerGenerator.NewCustomer ();
+			_customer = ZYPokemonCustomerGenerator.NewCustomer ();
 
 			//initialize Timer and start it for the first customer, set ticks to 0 and set the state of customer as waiting
 			_gameTime = SwinGame.CreateTimer ();
@@ -40,7 +40,7 @@ namespace MyGame
 			//
 
 			//initiate a new red status bar
-			_statusBar = new StatusBar ("emptyThick.png");
+			_statusBar = new ZYStatusBar ("emptyThick.png");
 			_statusBar.SetFillingImage ("redThick.png");
 			//
 		}
@@ -73,7 +73,7 @@ namespace MyGame
 
 
 		// register side bar to show decreased game life
-		public void RegisterSideBar (SideBarInterface sideBar)
+		public void RegisterSideBar (ZYSideBarInterface sideBar)
 		{
 			_sideBar = sideBar;
 		}
@@ -91,7 +91,7 @@ namespace MyGame
 			set { _waiting = value; }
 		}
 
-		public Customer Customer {
+		public ZYCustomer Customer {
 			get { return _customer; }
 			set { _customer = value; }
 		}
@@ -120,7 +120,7 @@ namespace MyGame
 				}
 				//old customer rage and leave if the bar reach full. Decrease 0.5 heart life and get a new customer.
 				if (_ticks >= 42) {
-					_customer = PokemonCustomerGenerator.NewCustomer ();
+					_customer = ZYPokemonCustomerGenerator.NewCustomer ();
 					_customer.SetX (_diningTable.X + 20);
 					_customer.SetY (_diningTable.Y - 40);
 					_ticks = 0;
@@ -134,7 +134,7 @@ namespace MyGame
 				}
 				if (_ticks < 0) {
 					SetFood ("");
-					_customer = PokemonCustomerGenerator.NewCustomer ();
+					_customer = ZYPokemonCustomerGenerator.NewCustomer ();
 					_customer.SetX (_diningTable.X + 20);
 					_customer.SetY (_diningTable.Y - 40);
 					_waiting = true;

@@ -4,20 +4,20 @@ using System.Collections.Generic;
 
 namespace MyGame
 {
-	public class BottomBar
+	public class ZYBottomBar
 	{
 		private Sprite _bottomBarBackground;
-		private SampleFood [] _sampleFood;
+		private ZYSampleFood [] _sampleFood;
 		private string _selection;
-		private List<Stove> _stove;
+		private List<ZYStove> _stove;
 
-		public BottomBar ()
+		public ZYBottomBar ()
 		{
 			//make the initial selection to NULL
 			_selection = "";
 
 			//for observer pattern 
-			_stove = new List<Stove> ();
+			_stove = new List<ZYStove> ();
 
 			//Background
 			SwinGame.LoadBitmapNamed ("btm_background", "btm_background.jpg");
@@ -25,10 +25,10 @@ namespace MyGame
 			//
 
 			//initialize 4 sample food
-			_sampleFood = new SampleFood [3];
-			_sampleFood[0] = new SampleFood ("BlueCandy.png");
-			_sampleFood [1] = new SampleFood ("GreenCandy.png");
-			_sampleFood [2] = new SampleFood ("RedCandy.png");
+			_sampleFood = new ZYSampleFood [3];
+			_sampleFood[0] = new ZYSampleFood ("BlueCandy.png");
+			_sampleFood [1] = new ZYSampleFood ("GreenCandy.png");
+			_sampleFood [2] = new ZYSampleFood ("RedCandy.png");
 			//
 		}
 
@@ -52,7 +52,7 @@ namespace MyGame
 		public void Draw ()
 		{
 			SwinGame.DrawSprite (_bottomBarBackground);
-			foreach (SampleFood sampleFood in _sampleFood) {
+			foreach (ZYSampleFood sampleFood in _sampleFood) {
 				sampleFood.Draw ();
 			}		
 		}
@@ -60,7 +60,7 @@ namespace MyGame
 		public string SelectFoodAt (Point2D pt)
 		{
 			//check through sampleFood 
-			foreach (SampleFood sampleFood in _sampleFood) {
+			foreach (ZYSampleFood sampleFood in _sampleFood) {
 				if (sampleFood.IsAt (pt)) {
 					sampleFood.Selected = true;
 					return sampleFood.Image;
@@ -86,9 +86,9 @@ namespace MyGame
 			}
 		}
 
-		public void RegisterStove (Stove[] stoveList)
+		public void RegisterStove (ZYStove[] stoveList)
 		{
-			foreach (Stove stove in stoveList) {
+			foreach (ZYStove stove in stoveList) {
 				_stove.Add (stove);
 			}
 		}

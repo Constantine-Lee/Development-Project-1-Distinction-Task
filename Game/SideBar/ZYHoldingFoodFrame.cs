@@ -3,13 +3,13 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class HoldingFoodFrame
+	public class ZYHoldingFoodFrame
 	{
 		private Sprite _frame;
 		private Sprite _holdingFood;
 		private string _foodName;
 
-		public HoldingFoodFrame ()
+		public ZYHoldingFoodFrame ()
 		{
 			SwinGame.LoadBitmapNamed ("frame", "frame.png");
 			_frame = SwinGame.CreateSprite (SwinGame.BitmapNamed ("frame"));

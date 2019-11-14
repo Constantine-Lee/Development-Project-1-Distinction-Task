@@ -4,32 +4,31 @@ using System.Collections.Generic;
 
 namespace MyGame
 {
-    public class EasyMode : View
+    public class ZYMediumMode : View
     {
-        private ServingArea _servingArea;
+        private ZYServingArea _servingArea;
         private EasyModeSideBar _sideBar;
-        private BottomBar _btmBar;
-        private Button _giveUpButton;
-        
+        private ZYBottomBar _btmBar;
+        private ZYButton _giveUpButton;
+
         private Timer _gameTime;
         private uint _ticks;
-        private StatusBar _statusBar;
+        private ZYStatusBar _statusBar;
 
-
-        public EasyMode(ViewManager viewManager) : base(viewManager)
+        public ZYMediumMode(ViewManager viewManager) : base(viewManager)
         {
             _sideBar = new EasyModeSideBar(_viewManager);
-            _servingArea = new ServingArea();
+            _servingArea = new ZYServingArea();
             
-            _btmBar = new BottomBar();
+            _btmBar = new ZYBottomBar();
 
-            _giveUpButton = new Button("blue_button07.png");
+            _giveUpButton = new ZYButton("blue_button07.png");
             _giveUpButton.SetWidth(80);
             _giveUpButton.SetHeight(80);
             _giveUpButton.SetText("Exit", 35);
 
             //Register for Observer Pattern
-            foreach (DiningTable diningTable in _servingArea.DiningTable)
+            foreach (ZYDiningTable diningTable in _servingArea.DiningTable)
             {
                 diningTable.RegisterSideBar(_sideBar);
             }
@@ -42,14 +41,14 @@ namespace MyGame
             SwinGame.StartTimer(_gameTime);
 
             //initiate new BlUE status bar
-            _statusBar = new StatusBar("Border_1.png");
-            _statusBar.SetFillingImage("Health_1.png");
+            _statusBar = new ZYStatusBar("blackprogressbar.png");
+            _statusBar.SetFillingImage("blueprogressbar.png");
             //
         }
 
         public void SetSpeed()
         {
-            DiningTable.sSPEED = 700;
+            ZYDiningTable.sSPEED = 500;
         }
 
         public override void Draw()
@@ -58,10 +57,10 @@ namespace MyGame
             _sideBar.Draw();
             _btmBar.Draw();
             _giveUpButton.Draw();
-            SwinGame.DrawText("Easy", Color.Black, "Arial", 15, 370, 10);
-            SwinGame.DrawText("Medium", Color.Black, "Arial", 15, 440, 50);
+            SwinGame.DrawText("Medium", Color.Black, "Arial", 15, 370, 10);
+            SwinGame.DrawText("Difficult", Color.Black, "Arial", 15, 440, 50);
             //draw the part of full bar based on the time passed. 
-            _statusBar.Draw((int)_ticks,365, 20);
+            _statusBar.Draw((int)_ticks, 365, 32);
         }
 
         public override void Update()
@@ -83,14 +82,13 @@ namespace MyGame
             {
                 if (_giveUpButton.IsAt(SwinGame.MousePosition()))
                 {
-                    _viewManager.View = _viewManager.End;
+                    _viewManager.View = _viewManager.ZYEnd;
                 }
             }
 
-            if (_ticks > 50)
+            if (_ticks > 125)
             {
-                _viewManager.MediumMode.SetSpeed();
-                _viewManager.View = _viewManager.MediumMode;
+                //_viewManager.View = _viewManager.StartDifficult;
             }
         }
 

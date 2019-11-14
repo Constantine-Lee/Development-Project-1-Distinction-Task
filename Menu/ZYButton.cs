@@ -3,7 +3,7 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class Button
+	public class ZYButton
 	{
 		private int _width, _height, _textPosX, _textPosY;
 
@@ -12,7 +12,7 @@ namespace MyGame
 		private string _text;
 		private int _size;
 
-		public Button (string buttonImage)
+		public ZYButton (string buttonImage)
 		{
 			SwinGame.LoadBitmapNamed(buttonImage, buttonImage);
 			_button = SwinGame.CreateSprite (SwinGame.BitmapNamed (buttonImage));

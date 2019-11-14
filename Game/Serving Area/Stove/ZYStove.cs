@@ -3,18 +3,18 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class Stove
+	public class ZYStove
 	{
 		private Sprite _stove;
-		private TableOfStove _tableOfStove;
-		private StatusBar _statusBar;
+		private ZYTableOfStove _tableOfStove;
+		private ZYStatusBar _statusBar;
 		private Timer _gameTime;
 		private uint _ticks;
 
 		private string _foodToCook;
 		private bool _cooking;
 
-		public Stove (TableOfStove tableOfStove)
+		public ZYStove (ZYTableOfStove tableOfStove)
 		{
 			//set the food to cook to null and cooking state as false
 			_foodToCook = "";
@@ -33,7 +33,7 @@ namespace MyGame
 			_gameTime = SwinGame.CreateTimer ();
 
 			//initiate new BlUE status bar
-			_statusBar = new StatusBar ("emptyThick.png");
+			_statusBar = new ZYStatusBar ("emptyThick.png");
 			_statusBar.SetFillingImage ("blueThick.png");
 			//
 		}
@@ -63,7 +63,7 @@ namespace MyGame
 			set {_cooking = value;}
 		}
 
-		public TableOfStove TableOfStove {
+		public ZYTableOfStove TableOfStove {
 			get {return _tableOfStove;}
 			set {_tableOfStove = value;}
 		}
