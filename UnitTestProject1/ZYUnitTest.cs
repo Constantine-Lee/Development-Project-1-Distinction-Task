@@ -14,5 +14,12 @@ namespace UnitTestProject1
             Assert.AreEqual("samplefood.png", zYSampleFood.Image);
             Assert.AreNotEqual("false", zYSampleFood.Image);
         }
+
+        [TestMethod]
+        public void TestGameLife()
+        {
+            ZYGameLife zYGameLife = new ZYGameLife();
+            Assert.AreEqual(100, zYGameLife.Width);
+        }
     }
 }
