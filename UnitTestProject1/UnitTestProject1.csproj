@@ -55,6 +55,7 @@
     <Compile Include="BSUnitTest.cs" />
     <Compile Include="MWTestButton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZYUnitTest.cs" />
     <Compile Include="UnitTestZYButton.cs" />
   </ItemGroup>
   <ItemGroup>
