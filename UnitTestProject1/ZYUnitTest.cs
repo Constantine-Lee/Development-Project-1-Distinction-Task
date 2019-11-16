@@ -12,6 +12,7 @@ namespace UnitTestProject1
         public void TestSampleFood()
         {
             Assert.AreEqual("samplefood.png", zYSampleFood.Image);
+            Assert.AreNotEqual("false", zYSampleFood.Image);
         }
     }
 }
