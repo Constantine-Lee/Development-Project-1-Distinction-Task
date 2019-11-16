@@ -89,7 +89,7 @@ namespace MyGame
 
             if (_ticks > 125)
             {                
-                //_viewManager.View = _viewManager.StartMedium;
+                _viewManager.View = _viewManager.StartMedium;
             }
         }
 
