@@ -35,6 +35,7 @@ namespace MyGame
 
 		public BS_SideBar ()
 		{
+            _life = 6;
 		}
 
 		public void SetX (int x)
