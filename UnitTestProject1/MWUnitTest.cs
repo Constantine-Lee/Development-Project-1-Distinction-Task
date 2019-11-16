@@ -13,7 +13,7 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
             _diningtable.SetX(0);
-            Assert.AreEqual(_diningtable.DiningTableSprite,10);
+            Assert.AreEqual(_diningtable.DiningTableSprite.X,0);
         }
     }
 }
