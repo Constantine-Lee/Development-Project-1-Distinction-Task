@@ -18,26 +18,53 @@ namespace MyGame
 			_button = SwinGame.CreateSprite (SwinGame.BitmapNamed (buttonImage));
 		}
 
-		public void SetX (int x)
+		public Boolean SetX (int x)
 		{
-
-			SwinGame.SpriteSetX (_button, x);
+            try
+            {
+                SwinGame.SpriteSetX(_button, x);
+                return true;
+            }catch(Exception e)
+            {
+                return false;
+            }
 		}
 
-		public void SetY (int y)
+		public Boolean SetY (int y)
 		{
-
-			SwinGame.SpriteSetY (_button, y);
+            try
+            {
+                SwinGame.SpriteSetY(_button, y);
+                return true;
+            }catch(Exception e)
+            {
+                return false;
+            }
 		}
 
-		public void SetWidth (int width)
+		public Boolean SetWidth (int width)
 		{
-			_width = width;
+            try
+            {
+                _width = width;
+                return true;
+            }catch(Exception e)
+            {
+                return false;
+            }
 		}
 
-		public void SetHeight (int height)
+		public Boolean SetHeight (int height)
 		{
-			_height = height;
+            try {
+                _height = height;
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+			
 		}
 
 		public void SetText (string text, int size)
