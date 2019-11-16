@@ -8,12 +8,28 @@ namespace UnitTestProject1
     public class MWUnitTest
     {
         MWDiningTable _diningtable = new MWDiningTable();
+        MWWoodenTable _woodentable = new MWWoodenTable();
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestDiningTableSetX()
         {
             _diningtable.SetX(0);
             Assert.AreEqual(_diningtable.DiningTableSprite.X,0);
+        }
+
+        [TestMethod]
+        public void TestWoodenTableSetX()
+        {
+            _woodentable.SetX(0);
+            Assert.AreEqual(_woodentable.DiningTableSprite.X, 0);
+        }
+
+        [TestMethod]
+        public void TestSideBarUpdateHoldingFoodFrame()
+        {
+            MWHoldingFoodFrame _holdingfoodframe = new MWHoldingFoodFrame();
+            Assert.AreEqual(_holdingfoodframe.HoldingFood.X, 384);
+            Assert.AreEqual(_holdingfoodframe.HoldingFood.Y, 178);
         }
     }
 }
