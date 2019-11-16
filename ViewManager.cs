@@ -9,14 +9,16 @@ namespace MyGame
         private Menu _menu;
         private Instruction _instruction;
         private ZYEnd _end;
-
+        private MWEnd _MWEnd;
         private View _view;
         private ZYEasyMode _easyMode;
         private ZYMediumMode _mediumMode;
         private ZYStartMedium _startMedium;
         private ZYDifficultMode _difficultMode;
         private ZYStartDifficult _startDifficult;
-
+        private MWGame _MWGame;
+        private GameMode _gameMode;
+        private BS_Game _BSGame;
 
         private ViewManager()
         {
@@ -29,7 +31,9 @@ namespace MyGame
             _startMedium = new ZYStartMedium(this);
             _difficultMode = new ZYDifficultMode(this);
             _startDifficult = new ZYStartDifficult(this);
-
+            _MWGame = new MWGame(this);
+            _gameMode = new GameMode(this);
+            _BSGame = new BS_Game(this);
             _easyMode.SetSpeed();
             _view = _menu;
         }
@@ -52,7 +56,9 @@ namespace MyGame
             _mediumMode.SetX(0);
             _startMedium.SetX(0);
             _startDifficult.SetX(0);
-
+            _MWGame.SetX(0);
+            _gameMode.SetX(0);
+            _BSGame.SetX(0);
         }
 
         public void SetY(int y)
@@ -64,10 +70,26 @@ namespace MyGame
             _mediumMode.SetY(0);
             _startMedium.SetY(0);
             _startDifficult.SetY(0);
-
+            _MWGame.SetY(0);
+            _gameMode.SetY(0);
+            _BSGame.SetY(0);
         }
 
+        public MWGame MWNewClassicGame()
+        {
+            MWGame game = new MWGame(this);
+            game.SetX(0);
+            game.SetY(0);
+            return game;
+        }
 
+        public BS_Game BSNewCasualGame()
+        {
+            BS_Game game = new BS_Game(this);
+            game.SetX(0);
+            game.SetY(0);
+            return game;
+        }
 
         public ZYStartMedium StartMedium
         {
@@ -156,8 +178,13 @@ namespace MyGame
             return difficultMode;
         }
 
+        public GameMode GameMode
+        {
+            get { return _gameMode; }
+            set { _gameMode = value; }
+        }
 
         public ZYEasyMode EasyMode { get => _easyMode; set => _easyMode = value; }
-        
+        public MWEnd MWEnd { get => _MWEnd; set => _MWEnd = value; }
     }
 }

@@ -44,7 +44,7 @@ namespace MyGame
             {
                 if (_startButton.IsAt(SwinGame.MousePosition()))
                 {
-                    //_viewManager.View = _viewManager.GameMode;
+                    _viewManager.View = _viewManager.GameMode;
                 }
                 if (_instructionButton.IsAt(SwinGame.MousePosition()))
                 {
