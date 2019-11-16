@@ -10,7 +10,7 @@ namespace UnitTestProject1
         ZYButton zyButton = new ZYButton("");
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestSetX()
         {
             Assert.AreEqual(true, zyButton.SetX(0));
         }
@@ -24,7 +24,13 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestWidth()
         {
-            Assert.AreEqual(true, zyButton.SetX(0));
+            Assert.AreEqual(true, zyButton.SetWidth(0));
+        }
+
+        [TestMethod]
+        public void TestHeight()
+        {
+            Assert.AreEqual(true, zyButton.SetHeight(0));
         }
     }
 }
