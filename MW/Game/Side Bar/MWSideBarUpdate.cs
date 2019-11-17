@@ -31,7 +31,6 @@ namespace MyGame
 			_sideBar = SwinGame.CreateSprite (SwinGame.BitmapNamed ("side"));
 
 		}
-
 		public void SetX (int x)
 		{
 			SwinGame.SpriteSetX (_sideBar, x);
