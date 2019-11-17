@@ -6,8 +6,11 @@ namespace MyGame
 	public class GameMode : View
 	{
 		private MWButton _classicButton;
+        private MWButton _survivalButton;
+        private MWButton _casualButton;
+        private MWButton _gotoMenuButton;
 
-		private Sprite _gameMode;
+        private Sprite _gameMode;
 		private string _backgroundImage;
 
         public string BackgroundImage { get => _backgroundImage; set => _backgroundImage = value; }
@@ -23,13 +26,30 @@ namespace MyGame
 			_classicButton.SetHeight (49);
 			_classicButton.SetText (" Classic ", 30);
 
-		}
+            _survivalButton = new MWButton("grey_button06.png");
+            _survivalButton.SetWidth(191);
+            _survivalButton.SetHeight(49);
+            _survivalButton.SetText(" Survival ", 30);
+
+            _casualButton = new MWButton("grey_button06.png");
+            _casualButton.SetWidth(191);
+            _casualButton.SetHeight(49);
+            _casualButton.SetText(" Casual ", 30);
+
+            _gotoMenuButton = new MWButton("grey_button06.png");
+            _gotoMenuButton.SetWidth(191);
+            _gotoMenuButton.SetHeight(49);
+            _gotoMenuButton.SetText(" Back to Menu ", 25);
+        }
 
 		public override void Draw ()
 		{
 			SwinGame.DrawSprite (_gameMode);
 			_classicButton.Draw2 ();
-		}
+            _survivalButton.Draw2();
+            _casualButton.Draw2();
+            _gotoMenuButton.Draw();
+        }
 
         public override void Update()
         {
@@ -42,6 +62,18 @@ namespace MyGame
                 if (_classicButton.IsAt(SwinGame.MousePosition()))
                 {
                     _viewManager.View = _viewManager.MWNewClassicGame();
+                }
+                if (_survivalButton.IsAt(SwinGame.MousePosition()))
+                {
+                    _viewManager.View = _viewManager.NewZYGame();
+                }
+                if (_casualButton.IsAt(SwinGame.MousePosition()))
+                {
+                    _viewManager.View = _viewManager.BSNewCasualGame();
+                }
+                if (_gotoMenuButton.IsAt(SwinGame.MousePosition()))
+                {
+                    _viewManager.View = _viewManager.Menu;
                 }
             }
             if (SwinGame.KeyTyped(KeyCode.vk_F12))
