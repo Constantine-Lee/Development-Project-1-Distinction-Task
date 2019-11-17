@@ -21,5 +21,20 @@ namespace UnitTestProject1
             ZYGameLife zYGameLife = new ZYGameLife();
             Assert.AreEqual(100, zYGameLife.Width);
         }
+
+        [TestMethod]
+        public void TestPauseScreen()
+        {
+            Boolean result;
+            try
+            {
+                PauseInterface pauseInterface = new PauseInterface();
+                result = true;
+            }catch(Exception e)
+            {
+                result = false;
+            }
+            Assert.AreEqual(true, result);
+        }
     }
 }
