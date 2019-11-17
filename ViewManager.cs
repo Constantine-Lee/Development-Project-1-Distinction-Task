@@ -184,7 +184,7 @@ namespace MyGame
             set { _gameMode = value; }
         }
 
-        public ZYEasyMode EasyMode { get => _easyMode; set => _easyMode = value; }
-        public MWEnd MWEnd { get => _MWEnd; set => _MWEnd = value; }
+        public ZYEasyMode EasyMode { get {return _easyMode; } set { _easyMode = value; } }
+        public MWEnd MWEnd { get { return _MWEnd; }  set { _MWEnd = value; } }
     }
 }

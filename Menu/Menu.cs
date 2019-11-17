@@ -12,7 +12,7 @@ namespace MyGame
 
         public Menu(ViewManager viewManager) : base(viewManager)
         {
-            _backgroundImage = "game_menu.jpg";
+            _backgroundImage = "CandyBackground.png";
             SwinGame.LoadBitmapNamed(_backgroundImage, _backgroundImage);
             _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed(_backgroundImage));
 
