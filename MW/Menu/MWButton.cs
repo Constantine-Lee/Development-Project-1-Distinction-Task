@@ -12,7 +12,10 @@ namespace MyGame
 		private string _text;
 		private int _size;
 
-		public MWButton (string buttonImage)
+        public int TextPosX { get => _textPosX; set => _textPosX = value; }
+        public int TextPosY { get => _textPosY; set => _textPosY = value; }
+
+        public MWButton (string buttonImage)
 		{
 			SwinGame.LoadBitmapNamed(buttonImage, buttonImage);
 			_button = SwinGame.CreateSprite (SwinGame.BitmapNamed (buttonImage));

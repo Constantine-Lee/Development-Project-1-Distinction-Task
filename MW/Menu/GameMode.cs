@@ -14,6 +14,7 @@ namespace MyGame
 		private string _backgroundImage;
 
         public string BackgroundImage { get => _backgroundImage; set => _backgroundImage = value; }
+        public MWButton ClassicButton { get => _classicButton; set => _classicButton = value; }
 
         public GameMode (ViewManager viewManager) : base (viewManager)
 		{

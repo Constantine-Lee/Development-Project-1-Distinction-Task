@@ -50,5 +50,25 @@ namespace UnitTestProject1
             GameMode _gameMode = new GameMode(_viewManager);
             Assert.AreEqual("Tutorial-game-interface-001.jpg", _gameMode.BackgroundImage);
         }
+
+        public void TestGameModeSetX()
+        {
+            ViewManager _viewManager = new ViewManager();
+            GameMode _gameMode = new GameMode(_viewManager);
+            MWButton _button = new MWButton("grey_button06.png");
+
+            _gameMode.SetX(0);
+            Assert.AreEqual(_gameMode.ClassicButton.TextPosX, 128);
+        }
+
+        public void TestGameModeSetY()
+        {
+            ViewManager _viewManager = new ViewManager();
+            GameMode _gameMode = new GameMode(_viewManager);
+            MWButton _button = new MWButton("grey_button06.png");
+
+            _gameMode.SetY(0);
+            Assert.AreEqual(_gameMode.ClassicButton.TextPosY, 108);
+        }
     }
 }
