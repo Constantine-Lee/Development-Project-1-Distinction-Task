@@ -33,6 +33,7 @@ namespace UnitTestProject1
             Assert.AreEqual(_holdingfoodframe.HoldingFood.Y, 178);
         }
 
+        [TestMethod]
         public void TestGameModeMousePosition()
         {
             MWButton _button = new MWButton("grey_button06.png");
@@ -44,6 +45,7 @@ namespace UnitTestProject1
             Assert.AreEqual(true, _button.IsAt(SwinGame.MousePosition()));
         }
 
+        [TestMethod]
         public void TestGameModeBackground()
         {
             ViewManager _viewManager = new ViewManager();
@@ -51,6 +53,7 @@ namespace UnitTestProject1
             Assert.AreEqual("Tutorial-game-interface-001.jpg", _gameMode.BackgroundImage);
         }
 
+        [TestMethod]
         public void TestGameModeSetX()
         {
             ViewManager _viewManager = new ViewManager();
@@ -61,6 +64,7 @@ namespace UnitTestProject1
             Assert.AreEqual(_gameMode.ClassicButton.TextPosX, 128);
         }
 
+        [TestMethod]
         public void TestGameModeSetY()
         {
             ViewManager _viewManager = new ViewManager();
