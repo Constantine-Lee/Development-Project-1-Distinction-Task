@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using SwinGameSDK;
 
 namespace MyGame
@@ -27,6 +24,8 @@ namespace MyGame
 			_gotoMenuButton.SetText (" Back to Menu ", 25);
 			//
 		}
+
+        public Settings() { }
 
         public override void Draw()
         {

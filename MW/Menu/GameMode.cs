@@ -18,7 +18,7 @@ namespace MyGame
 
         public GameMode (ViewManager viewManager) : base (viewManager)
 		{
-			_backgroundImage = "Tutorial-game-interface-001.jpg";
+			_backgroundImage = "game_menu.jpg";
 			SwinGame.LoadBitmapNamed (_backgroundImage, _backgroundImage);
 			_gameMode = SwinGame.CreateSprite (SwinGame.BitmapNamed (_backgroundImage));
 
