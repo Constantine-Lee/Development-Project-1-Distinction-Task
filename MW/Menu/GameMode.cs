@@ -88,6 +88,15 @@ namespace MyGame
         {
             _classicButton.SetX(x + 90);
             _classicButton.SetTextPositionX(x + 128);
+
+            _survivalButton.SetX(x + 90);
+            _survivalButton.SetTextPositionX(x + 120);
+
+            _casualButton.SetX(x + 90);
+            _casualButton.SetTextPositionX(x + 130);
+
+            _gotoMenuButton.SetX(x + 305);
+            _gotoMenuButton.SetTextPositionX(x + 315);
         }
 
         //y = 0
@@ -95,6 +104,15 @@ namespace MyGame
         {
             _classicButton.SetY(y + 100);
             _classicButton.SetTextPositionY(y + 108);
+
+            _survivalButton.SetY(y + 170);
+            _survivalButton.SetTextPositionY(y + 178);
+
+            _casualButton.SetY(y + 240);
+            _casualButton.SetTextPositionY(y + 248);
+
+            _gotoMenuButton.SetY(y + 340);
+            _gotoMenuButton.SetTextPositionY(y + 350);
         }
     }
 }
