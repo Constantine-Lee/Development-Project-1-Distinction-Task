@@ -77,7 +77,7 @@ namespace MyGame
 
             // get the ticks from time passed
             _ticks = SwinGame.TimerTicks(_gameTime) / 100;
-
+            
             //change view to end if give up button clicked
             if (SwinGame.MouseClicked(MouseButton.LeftButton))
             {
