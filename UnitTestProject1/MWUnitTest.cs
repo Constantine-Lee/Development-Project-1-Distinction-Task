@@ -74,5 +74,16 @@ namespace UnitTestProject1
             _gameMode.SetY(0);
             Assert.AreEqual(_gameMode.ClassicButton.TextPosY, 108);
         }
+
+        [TestMethod]
+        public void TestGameModeNewSetY()
+        {
+            ViewManager _viewManager = new ViewManager();
+            GameMode _gameMode = new GameMode(_viewManager);
+            MWButton _button = new MWButton("grey_button06.png");
+
+            _gameMode.SetY(12);
+            Assert.AreEqual(_gameMode.ClassicButton.TextPosY, 120);
+        }
     }
 }
