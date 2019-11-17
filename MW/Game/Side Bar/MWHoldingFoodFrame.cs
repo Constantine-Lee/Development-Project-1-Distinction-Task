@@ -25,7 +25,7 @@ namespace MyGame
 			SwinGame.SpriteSetY (_holdingFood, 178);
 		}
 
-        public Sprite HoldingFood { get { return _holdingFood; } set { _holdingFood = value; } }
+        public Sprite HoldingFood { get => _holdingFood; set => _holdingFood = value; }
 
         public void Draw ()
 		{
