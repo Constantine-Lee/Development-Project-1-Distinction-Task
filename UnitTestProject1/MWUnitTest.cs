@@ -34,14 +34,11 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void TestGameModeSetX()
+        public void TestSideBarUpdateScore()
         {
-            ViewManager _viewManager = new ViewManager();
-            GameMode _gameMode = new GameMode(_viewManager);
-            MWButton _button = new MWButton("grey_button06.png");
-
-            _gameMode.SetX(0);
-            Assert.AreEqual(_gameMode.ClassicButton.TextPosX, 128);
+            MWSideBarUpdate __sidebarUpdate = new MWSideBarUpdate();
+            __sidebarUpdate.AddScore();
+            Assert.AreEqual(100, MWSideBarUpdate.Score);
         }
     }
 }

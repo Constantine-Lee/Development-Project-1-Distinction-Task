@@ -13,7 +13,7 @@ namespace MyGame
 
 		//private Timer _gameTime;
 		//private static uint _ticks;
-		private static int _score = 0;
+		private static int _score;
 
 		private ViewManager _viewManager;
 
@@ -28,9 +28,11 @@ namespace MyGame
 			_life = 6;
 			_gameLife = new MWGameLife ();
 			SwinGame.LoadBitmapNamed ("side", "side_menu.png");
-			_sideBar = SwinGame.CreateSprite (SwinGame.BitmapNamed ("side"));
-
+            _sideBar = SwinGame.CreateSprite(SwinGame.BitmapNamed("side"));
 		}
+
+        public MWSideBarUpdate()
+        { }
 		public void SetX (int x)
 		{
 			SwinGame.SpriteSetX (_sideBar, x);
