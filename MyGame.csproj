@@ -175,6 +175,7 @@
     <Compile Include="MW\Game\Side Bar\MWSideBarUpdate.cs" />
     <Compile Include="MW\Menu\GameMode.cs" />
     <Compile Include="MW\Menu\MWButton.cs" />
+    <Compile Include="Settings\Settings.cs" />
     <Compile Include="src\GameMain.cs" />
     <Compile Include="ViewManager.cs" />
     <Compile Include="View.cs" />
