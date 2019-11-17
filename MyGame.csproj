@@ -90,6 +90,7 @@
     <Content Include="Resources\images\startmedium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\Tutorial-game-interface-001.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BJ\End\BS_End.cs" />
@@ -171,6 +172,7 @@
     <Compile Include="MW\Game\Side Bar\MWGameLife.cs" />
     <Compile Include="MW\Game\Side Bar\MWHoldingFoodFrame.cs" />
     <Compile Include="MW\Game\Side Bar\MWSideBarUpdate.cs" />
+    <Compile Include="MW\Menu\GameMode.cs" />
     <Compile Include="MW\Menu\MWButton.cs" />
     <Compile Include="src\GameMain.cs" />
     <Compile Include="ViewManager.cs" />

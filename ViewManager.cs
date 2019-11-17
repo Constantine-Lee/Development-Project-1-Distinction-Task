@@ -20,7 +20,7 @@ namespace MyGame
         private GameMode _gameMode;
         private BS_Game _BSGame;
 
-        private ViewManager()
+        public ViewManager()
         {
             SwinGame.LoadResourceBundle("bundle.txt");
             _menu = new Menu(this);

@@ -46,9 +46,9 @@ namespace UnitTestProject1
 
         public void TestGameModeBackground()
         {
-            GameMode _gameMode = new GameMode();
+            ViewManager _viewManager = new ViewManager();
+            GameMode _gameMode = new GameMode(_viewManager);
             Assert.AreEqual("Tutorial-game-interface-001.jpg", _gameMode.BackgroundImage);
-
         }
     }
 }
