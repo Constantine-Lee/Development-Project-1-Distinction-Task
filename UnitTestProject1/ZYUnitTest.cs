@@ -28,7 +28,7 @@ namespace UnitTestProject1
             Boolean result;
             try
             {
-                PauseInterface pauseInterface = new PauseInterface();
+                PauseScreen pauseInterface = new PauseScreen();
                 result = true;
             }catch(Exception e)
             {
