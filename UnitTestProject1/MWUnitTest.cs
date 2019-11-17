@@ -34,56 +34,11 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void TestGameModeMousePosition()
+        public void TestSideBarUpdateScore()
         {
-            MWButton _button = new MWButton("grey_button06.png");
-            SwinGame.PointInRect(SwinGame.MousePosition(), 0, 0, 45, 50);
-            _button.SetX(0);
-            _button.SetY(0);
-            _button.SetWidth(191);
-            _button.SetWidth(49);
-            Assert.AreEqual(true, _button.IsAt(SwinGame.MousePosition()));
-        }
-
-        [TestMethod]
-        public void TestGameModeBackground()
-        {
-            ViewManager _viewManager = new ViewManager();
-            GameMode _gameMode = new GameMode(_viewManager);
-            Assert.AreEqual("Tutorial-game-interface-001.jpg", _gameMode.BackgroundImage);
-        }
-
-        [TestMethod]
-        public void TestGameModeSetX()
-        {
-            ViewManager _viewManager = new ViewManager();
-            GameMode _gameMode = new GameMode(_viewManager);
-            MWButton _button = new MWButton("grey_button06.png");
-
-            _gameMode.SetX(0);
-            Assert.AreEqual(_gameMode.ClassicButton.TextPosX, 128);
-        }
-
-        [TestMethod]
-        public void TestGameModeSetY()
-        {
-            ViewManager _viewManager = new ViewManager();
-            GameMode _gameMode = new GameMode(_viewManager);
-            MWButton _button = new MWButton("grey_button06.png");
-
-            _gameMode.SetY(0);
-            Assert.AreEqual(_gameMode.ClassicButton.TextPosY, 108);
-        }
-
-        [TestMethod]
-        public void TestGameModeNewSetY()
-        {
-            ViewManager _viewManager = new ViewManager();
-            GameMode _gameMode = new GameMode(_viewManager);
-            MWButton _button = new MWButton("grey_button06.png");
-
-            _gameMode.SetY(12);
-            Assert.AreEqual(_gameMode.ClassicButton.TextPosY, 120);
+            MWSideBarUpdate __sidebarUpdate = new MWSideBarUpdate();
+            __sidebarUpdate.AddScore();
+            Assert.AreEqual(100, MWSideBarUpdate.Score);
         }
     }
 }
