@@ -8,6 +8,7 @@ namespace UnitTestProject1
     public class ZYUnitTest
     {
         ZYSampleFood zYSampleFood = new ZYSampleFood("samplefood.png");
+        ViewManager viewManager = new ViewManager();
         [TestMethod]
         public void TestSampleFood()
         {
@@ -28,7 +29,7 @@ namespace UnitTestProject1
             Boolean result;
             try
             {
-                PauseScreen pauseInterface = new PauseScreen();
+                PauseScreen pauseInterface = new PauseScreen(viewManager);
                 result = true;
             }
             catch (Exception e)
