@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyGame;
-using SwinGameSDK;
 
 namespace UnitTestProject1
 {
@@ -15,7 +14,7 @@ namespace UnitTestProject1
         public void TestDiningTableSetX()
         {
             _diningtable.SetX(0);
-            Assert.AreEqual(_diningtable.DiningTableSprite.X,0);
+            Assert.AreEqual(_diningtable.DiningTableSprite.X, 0);
         }
 
         [TestMethod]
