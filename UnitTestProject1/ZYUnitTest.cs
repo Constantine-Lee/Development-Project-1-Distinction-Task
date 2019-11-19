@@ -25,10 +25,11 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestPauseScreen()
         {
+            ViewManager viewMananager = new ViewManager();
             Boolean result;
             try
             {
-                PauseScreen pauseInterface = new PauseScreen();
+                PauseScreen pauseInterface = new PauseScreen(viewMananager);
                 result = true;
             }catch(Exception e)
             {

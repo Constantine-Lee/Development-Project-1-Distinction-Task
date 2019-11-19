@@ -88,7 +88,7 @@ namespace MyGame
 
             if (_ticks > 125)
             {
-                //_viewManager.View = _viewManager.StartDifficult;
+                _viewManager.View = _viewManager.StartDifficult;
             }
         }
 
