@@ -6,13 +6,13 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-    public class PauseScreen: View
+    public class PauseScreen
     {
         private string _image;
         private ZYButton _resumeButton;
         private Sprite _menu;
 
-        public PauseScreen(ViewManager viewManager) : base(viewManager)
+        public PauseScreen()
         {
             //background Image
             _image = "pausescreen.png";

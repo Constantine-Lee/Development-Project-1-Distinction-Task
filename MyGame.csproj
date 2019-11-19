@@ -499,10 +499,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UnitTestProject1\obj\debug\" />
-    <Folder Include="UnitTestProject1\obj\release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
     <Copy SourceFiles="@(WinLibraryFiles)" DestinationFolder="$(OutDir)" />
