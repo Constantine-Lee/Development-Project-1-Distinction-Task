@@ -13,8 +13,8 @@ namespace MyGame
         private Sprite _gameMode;
 		private string _backgroundImage;
 
-        public string BackgroundImage { get => _backgroundImage; set => _backgroundImage = value; }
-        public MWButton ClassicButton { get => _classicButton; set => _classicButton = value; }
+        public string BackgroundImage { get {return _backgroundImage; } set { _backgroundImage = value; } }
+        public MWButton ClassicButton { get {return _classicButton; } set { _classicButton = value; } }
 
         public GameMode (ViewManager viewManager) : base (viewManager)
 		{
