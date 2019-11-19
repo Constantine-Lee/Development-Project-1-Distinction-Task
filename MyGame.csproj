@@ -91,6 +91,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\images\Tutorial-game-interface-001.jpg" />
+    <Content Include="UnitTestProject1\obj\Debug\UnitTestProject1.csproj.FileListAbsolute.txt" />
+    <Content Include="UnitTestProject1\obj\Debug\UnitTestProject1.dll" />
+    <Content Include="UnitTestProject1\obj\Debug\UnitTestProject1.pdb" />
     <Content Include="UnitTestProject1\UnitTestProject1.csproj" />
   </ItemGroup>
   <ItemGroup>
@@ -260,6 +263,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <MacLibraryFiles Include="lib\sdl13\libSGSDK.dylib" />
+    <None Include="UnitTestProject1\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CopyComplete" />
+    <None Include="UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache" />
+    <None Include="UnitTestProject1\obj\Debug\UnitTestProject1.csprojAssemblyReference.cache" />
+    <None Include="UnitTestProject1\obj\Release\UnitTestProject1.csproj.CoreCompileInputs.cache" />
     <None Include="UnitTestProject1\packages.config" />
     <WinLibraryFiles Include="lib\win\jpeg.dll" />
     <WinLibraryFiles Include="lib\win\libfreetype-6.dll" />
@@ -499,7 +507,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UnitTestProject1\obj\Debug\TempPE\" />
+  </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
     <Copy SourceFiles="@(WinLibraryFiles)" DestinationFolder="$(OutDir)" />
