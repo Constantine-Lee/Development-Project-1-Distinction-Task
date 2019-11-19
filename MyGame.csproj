@@ -91,10 +91,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\images\Tutorial-game-interface-001.jpg" />
-    <Content Include="UnitTestProject1\obj\Debug\UnitTestProject1.csproj.FileListAbsolute.txt" />
-    <Content Include="UnitTestProject1\obj\Debug\UnitTestProject1.dll" />
-    <Content Include="UnitTestProject1\obj\Debug\UnitTestProject1.pdb" />
-    <Content Include="UnitTestProject1\UnitTestProject1.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BJ\End\BS_End.cs" />
@@ -181,11 +177,6 @@
     <Compile Include="MW\Menu\MWButton.cs" />
     <Compile Include="Settings\Settings.cs" />
     <Compile Include="src\GameMain.cs" />
-    <Compile Include="UnitTestProject1\BSUnitTest.cs" />
-    <Compile Include="UnitTestProject1\MWUnitTest.cs" />
-    <Compile Include="UnitTestProject1\Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTestProject1\UnitTestZYButton.cs" />
-    <Compile Include="UnitTestProject1\ZYUnitTest.cs" />
     <Compile Include="ViewManager.cs" />
     <Compile Include="View.cs" />
     <Compile Include="Instruction\Instruction.cs" />
@@ -263,12 +254,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <MacLibraryFiles Include="lib\sdl13\libSGSDK.dylib" />
-    <None Include="UnitTestProject1\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CopyComplete" />
-    <None Include="UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache" />
-    <None Include="UnitTestProject1\obj\Debug\UnitTestProject1.csprojAssemblyReference.cache" />
-    <None Include="UnitTestProject1\obj\Release\UnitTestProject1.csproj.CoreCompileInputs.cache" />
-    <None Include="UnitTestProject1\packages.config" />
     <WinLibraryFiles Include="lib\win\jpeg.dll" />
     <WinLibraryFiles Include="lib\win\libfreetype-6.dll" />
     <WinLibraryFiles Include="lib\win\libogg-0.dll" />
@@ -506,9 +491,6 @@
     <None Include="Resources\images\meowth.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UnitTestProject1\obj\Debug\TempPE\" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
