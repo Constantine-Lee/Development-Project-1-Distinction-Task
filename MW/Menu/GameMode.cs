@@ -13,12 +13,12 @@ namespace MyGame
         private Sprite _gameMode;
 		private string _backgroundImage;
 
-        public string BackgroundImage { get {return _backgroundImage; } set { _backgroundImage = value; } }
-        public MWButton ClassicButton { get {return _classicButton; } set { _classicButton = value; } }
+        public string BackgroundImage { get => _backgroundImage; set => _backgroundImage = value; }
+        public MWButton ClassicButton { get => _classicButton; set => _classicButton = value; }
 
         public GameMode (ViewManager viewManager) : base (viewManager)
 		{
-			_backgroundImage = "game_menu.jpg";
+			_backgroundImage = "Tutorial-game-interface-001.jpg";
 			SwinGame.LoadBitmapNamed (_backgroundImage, _backgroundImage);
 			_gameMode = SwinGame.CreateSprite (SwinGame.BitmapNamed (_backgroundImage));
 

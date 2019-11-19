@@ -7,12 +7,11 @@ namespace UnitTestProject1
     [TestClass]
     public class BS_Test1
     {
-        Settings _settings = new Settings();
-        
+        BS_SideBar _sideBar = new BS_SideBar();
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.IsNotNull(_settings);
+            Assert.AreEqual(_sideBar.FullLifeCheck(), true);
         }
     }
 }
