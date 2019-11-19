@@ -14,7 +14,7 @@ namespace MyGame
 
         public Menu(ViewManager viewManager) : base(viewManager)
         {
-			_backgroundImage = _resource.BG;
+			_backgroundImage = _resource.imgOut(2);
             SwinGame.LoadBitmapNamed(_backgroundImage, _backgroundImage);
             _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed(_backgroundImage));
 

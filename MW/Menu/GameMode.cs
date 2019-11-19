@@ -19,7 +19,7 @@ namespace MyGame
 
         public GameMode (ViewManager viewManager) : base (viewManager)
 		{
-			_backgroundImage = _resource.BG;
+			_backgroundImage = _resource.imgOut(2);
 			SwinGame.LoadBitmapNamed (_backgroundImage, _backgroundImage);
 			_gameMode = SwinGame.CreateSprite (SwinGame.BitmapNamed (_backgroundImage));
 
