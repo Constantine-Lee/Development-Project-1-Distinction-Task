@@ -12,8 +12,8 @@ namespace MyGame
 		private string _text;
 		private int _size;
 
-        public int TextPosX { get {return _textPosX; } set { _textPosX = value; }}
-        public int TextPosY { get {return _textPosY; } set { _textPosY = value; }}
+        public int TextPosX { get => _textPosX; set => _textPosX = value; }
+        public int TextPosY { get => _textPosY; set => _textPosY = value; }
 
         public MWButton (string buttonImage)
 		{

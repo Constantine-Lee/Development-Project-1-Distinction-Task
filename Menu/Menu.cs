@@ -7,7 +7,6 @@ namespace MyGame
     {
         private ZYButton _startButton;
         private ZYButton _instructionButton;
-        private BS_Button _settingsButton;
         private Sprite _menu;
         private string _backgroundImage;
 
@@ -22,11 +21,6 @@ namespace MyGame
             _startButton.SetHeight(49);
             _startButton.SetText("     Start     ", 33);
 
-            _settingsButton = new BS_Button("grey_button06.png");
-            _settingsButton.SetWidth(191);
-            _settingsButton.SetHeight(49);
-            _settingsButton.SetText(" Settings ", 33);
-
             _instructionButton = new ZYButton("grey_button06.png");
             _instructionButton.SetWidth(191);
             _instructionButton.SetHeight(49);
@@ -37,9 +31,7 @@ namespace MyGame
         {
             SwinGame.DrawSprite(_menu);
             _startButton.Draw();
-            _settingsButton.Draw();
             _instructionButton.Draw();
-            
         }
 
         public override void Update()
@@ -57,9 +49,6 @@ namespace MyGame
                 if (_instructionButton.IsAt(SwinGame.MousePosition()))
                 {
                     _viewManager.View = _viewManager.Instruction;
-                }
-                if (_settingsButton.IsAt(SwinGame.MousePosition())) {
-                    _viewManager.View = _viewManager.Settings;
                 }
             }
         }

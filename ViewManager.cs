@@ -8,7 +8,6 @@ namespace MyGame
         private static ViewManager sViewManager;
         private Menu _menu;
         private Instruction _instruction;
-        private Settings _settings;
         private ZYEnd _end;
         private MWEnd _MWEnd;
         private View _view;
@@ -35,7 +34,6 @@ namespace MyGame
             _MWGame = new MWGame(this);
             _gameMode = new GameMode(this);
             _BSGame = new BS_Game(this);
-            _settings = new Settings(this);
             _easyMode.SetSpeed();
             _view = _menu;
         }
@@ -61,7 +59,6 @@ namespace MyGame
             _MWGame.SetX(0);
             _gameMode.SetX(0);
             _BSGame.SetX(0);
-            _settings.SetX(0);
         }
 
         public void SetY(int y)
@@ -76,7 +73,6 @@ namespace MyGame
             _MWGame.SetY(0);
             _gameMode.SetY(0);
             _BSGame.SetY(0);
-            _settings.SetY(0);
         }
 
         public MWGame MWNewClassicGame()
@@ -122,12 +118,6 @@ namespace MyGame
         {
             get { return _instruction; }
             set { _instruction = value; }
-        }
-
-        public Settings Settings
-        {
-            get { return _settings; }
-            set { _settings = value; }
         }
 
         public ZYEnd ZYEnd
@@ -194,7 +184,7 @@ namespace MyGame
             set { _gameMode = value; }
         }
 
-        public ZYEasyMode EasyMode { get {return _easyMode;} set { _easyMode = value; } }
-        public MWEnd MWEnd { get { return _MWEnd; } set { _MWEnd = value; } }
+        public ZYEasyMode EasyMode { get => _easyMode; set => _easyMode = value; }
+        public MWEnd MWEnd { get => _MWEnd; set => _MWEnd = value; }
     }
 }
