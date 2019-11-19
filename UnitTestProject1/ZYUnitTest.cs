@@ -29,7 +29,7 @@ namespace UnitTestProject1
             Boolean result;
             try
             {
-                PauseScreen pauseInterface = new PauseScreen(viewMananager);
+                PauseScreenForEasy pauseInterface = new PauseScreenForEasy(viewMananager);
                 result = true;
             }catch(Exception e)
             {
