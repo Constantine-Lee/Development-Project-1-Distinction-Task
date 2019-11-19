@@ -22,7 +22,6 @@ namespace UnitTestProject1
             ZYGameLife zYGameLife = new ZYGameLife();
             Assert.AreEqual(100, zYGameLife.Width);
         }
-<<<<<<< HEAD
 
         [TestMethod]
         public void TestPauseScreen()
@@ -40,7 +39,5 @@ namespace UnitTestProject1
             Assert.AreEqual(true, result);
         }
 
-=======
->>>>>>> parent of 324355f... merge pause feature branch into master
     }
 }
