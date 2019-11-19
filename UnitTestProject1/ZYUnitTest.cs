@@ -39,11 +39,5 @@ namespace UnitTestProject1
             Assert.AreEqual(true, result);
         }
 
-        [TestMethod]
-        public void TestSampleFood2()
-        {
-            Assert.AreEqual("notequal", zYSampleFood.Image);            
-        }
-
     }
 }
