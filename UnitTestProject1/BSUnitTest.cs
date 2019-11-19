@@ -10,7 +10,7 @@ namespace UnitTestProject1
         Settings _settings = new Settings();
         
         [TestMethod]
-        public void SettingsUnitTest()
+        public void TestMethod1()
         {
             Assert.IsNotNull(_settings);
         }
