@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace MyGame
 {
-	public class Resources
+	public static class Resources
 	{
 
-		private List<string> _backgroundImage = new List<string>();
+		private static List<string> _backgroundImage = new List<string>();
 
-		public Resources()
+		static Resources()
 		{
 			_backgroundImage.Add("candybackground1.png");
 			_backgroundImage.Add("candybackground2.png");
@@ -19,7 +19,7 @@ namespace MyGame
 			_backgroundImage.Add("candybackground7.png");
 		}
 
-		public string imgOut(int img) 
+		public static string imgOut(int img) 
 		{
 			switch (img) {
 				case (1):
@@ -41,7 +41,7 @@ namespace MyGame
 			}
 		}
 
-		public int numOfImgs() 
+		public static int numOfImgs() 
 		{
 			return _backgroundImage.Count;
 		}
