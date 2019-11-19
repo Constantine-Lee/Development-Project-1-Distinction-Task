@@ -3,7 +3,7 @@ namespace MyGame
 {
 	public static class BS_bgSelector
 	{
-		private static int img = 6;
+		private static int img = 2;
 
 		static BS_bgSelector()
 		{
@@ -15,12 +15,19 @@ namespace MyGame
 
 		public static void nextImg() 
 		{
-			img++;
+			img = img + 1;
 		}
 
 		public static void previousImg()
 		{
 			img--;
+			bg_img();
+		}
+
+		public static int Img 
+		{
+			get { return img; }
+			set { img = value; }
 		}
 	}
 }
