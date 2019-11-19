@@ -7,13 +7,14 @@ namespace MyGame
     {
         private string _image;
         private BS_Button _gotoMenuButton;
+		private Resources _resource = new Resources();
         private Sprite _menu;
 
         public Settings(ViewManager viewManager)
             : base(viewManager)
         {
             //background Image
-            _image = "game_menu.png";
+			_image = _resource.BG;
             SwinGame.LoadBitmapNamed(_image, _image);
             _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed(_image));
             //
