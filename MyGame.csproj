@@ -122,7 +122,6 @@
     <Compile Include="End\ZYEnd.cs" />
     <Compile Include="Game\BottomBar\ZYBottomBar.cs" />
     <Compile Include="Game\BottomBar\ZYSampleFood.cs" />
-    <Compile Include="Game\PauseScreen.cs" />
     <Compile Include="Game\Serving Area\Customer\ZYCustomer.cs" />
     <Compile Include="Game\Serving Area\Customer\ZYPokemonCustomer.cs" />
     <Compile Include="Game\Serving Area\Customer\ZYPokemonCustomerGenerator.cs" />
