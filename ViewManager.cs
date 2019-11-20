@@ -8,7 +8,7 @@ namespace MyGame
         private static ViewManager sViewManager;
         private Menu _menu;
         private Instruction _instruction;
-        private Settings _settings;
+       
         private BS_End _BSEnd;
         private ZYEnd _end;
         private MWEnd _MWEnd;
@@ -22,16 +22,17 @@ namespace MyGame
         private GameMode _gameMode;
         private BS_Game _BSGame;
         private PauseScreenForEasy _pauseScreenForEasy;
-		private PauseScreenForMedium _pauseScreenForMedium;
+        private PauseScreenForMedium _pauseScreenForMedium;
 
         public ViewManager()
         {
             SwinGame.LoadResourceBundle("bundle.txt");
             _menu = new Menu(this);
             _instruction = new Instruction(this);
-            _settings = new Settings(this);
+            
             _BSEnd = new BS_End(this);
             _end = new ZYEnd(this);
+            _MWEnd = new MWEnd(this);
             _easyMode = new ZYEasyMode(this);
             _mediumMode = new ZYMediumMode(this);
             _startMedium = new ZYStartMedium(this);
@@ -41,7 +42,7 @@ namespace MyGame
             _gameMode = new GameMode(this);
             _BSGame = new BS_Game(this);
             _pauseScreenForEasy = new PauseScreenForEasy(this);
-			_pauseScreenForMedium = new PauseScreenForMedium (this);
+            _pauseScreenForMedium = new PauseScreenForMedium(this);
             _easyMode.SetSpeed();
             _view = _menu;
         }
@@ -59,9 +60,10 @@ namespace MyGame
         {
             _menu.SetX(0);
             _instruction.SetX(0);
-            _settings.SetX(0);
+           
             _BSEnd.SetX(0);
             _end.SetX(0);
+            _MWEnd.SetX(0);
             _easyMode.SetX(0);
             _mediumMode.SetX(0);
             _startMedium.SetX(0);
@@ -70,16 +72,17 @@ namespace MyGame
             _gameMode.SetX(0);
             _BSGame.SetX(0);
             _pauseScreenForEasy.SetX(0);
-			_pauseScreenForMedium.SetX (0);
+            _pauseScreenForMedium.SetX(0);
         }
 
         public void SetY(int y)
         {
             _menu.SetY(0);
             _instruction.SetY(0);
-            _settings.SetY(0);
+            
             _BSEnd.SetY(0);
             _end.SetY(0);
+            _MWEnd.SetY(0);
             _easyMode.SetY(0);
             _mediumMode.SetY(0);
             _startMedium.SetY(0);
@@ -88,7 +91,7 @@ namespace MyGame
             _gameMode.SetY(0);
             _BSGame.SetY(0);
             _pauseScreenForEasy.SetY(0);
-			_pauseScreenForMedium.SetY (0);
+            _pauseScreenForMedium.SetY(0);
         }
 
         public PauseScreenForEasy PauseScreenForEasy
@@ -97,10 +100,11 @@ namespace MyGame
             set { _pauseScreenForEasy = value; }
         }
 
-		public PauseScreenForMedium PauseScreenForMedium {
-			get { return _pauseScreenForMedium; }
-			set { _pauseScreenForMedium = value; }
-		}
+        public PauseScreenForMedium PauseScreenForMedium
+        {
+            get { return _pauseScreenForMedium; }
+            set { _pauseScreenForMedium = value; }
+        }
 
         public MWGame MWNewClassicGame()
         {
@@ -147,11 +151,6 @@ namespace MyGame
             set { _instruction = value; }
         }
 
-        public Settings Settings 
-        {
-            get { return _settings; }
-            set { _settings = value; }
-        }
 
         public ZYEnd ZYEnd
         {
@@ -193,10 +192,16 @@ namespace MyGame
 
         public ZYEasyMode NewZYGame()
         {
-            ZYEasyMode game = new ZYEasyMode(this);
-            game.SetX(0);
-            game.SetY(0);
-            return game;
+            _easyMode = new ZYEasyMode(this);
+            _mediumMode = new ZYMediumMode(this);
+            _difficultMode = new ZYDifficultMode(this);
+            _easyMode.SetX(0);
+            _easyMode.SetY(0);
+            _mediumMode.SetX(0);
+            _mediumMode.SetY(0);
+            _difficultMode.SetX(0);
+            _difficultMode.SetY(0);
+            return _easyMode;
         }
 
         public ZYMediumMode NewMediumMode()
@@ -223,7 +228,7 @@ namespace MyGame
             set { _gameMode = value; }
         }
 
-        public ZYEasyMode EasyMode { get {return _easyMode; } set { _easyMode = value; } }
-        public MWEnd MWEnd { get {return _MWEnd; } set { _MWEnd = value; } }
+        public ZYEasyMode EasyMode { get { return _easyMode; } set { _easyMode = value; } }
+        public MWEnd MWEnd { get { return _MWEnd; } set { _MWEnd = value; } }
     }
 }
