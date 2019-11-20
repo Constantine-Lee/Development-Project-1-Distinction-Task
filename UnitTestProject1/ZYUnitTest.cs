@@ -25,17 +25,6 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestPauseScreen()
         {
-            ViewManager viewMananager = new ViewManager();
-            Boolean result;
-            try
-            {
-                PauseScreen pauseInterface = new PauseScreen(viewMananager);
-                result = true;
-            }catch(Exception e)
-            {
-                result = false;
-            }
-            Assert.AreEqual(true, result);
         }
     }
 }
