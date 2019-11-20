@@ -25,7 +25,6 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestPauseScreen()
         {
-
         }
     }
 }

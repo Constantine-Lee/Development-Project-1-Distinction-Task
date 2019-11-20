@@ -125,7 +125,6 @@
     <Compile Include="Game\BottomBar\ZYBottomBar.cs" />
     <Compile Include="Game\BottomBar\ZYSampleFood.cs" />
     <Compile Include="Game\PauseScreenForEasy.cs" />
-    <Compile Include="Game\PauseScreenForMedium.cs" />
     <Compile Include="Game\Serving Area\Customer\ZYCustomer.cs" />
     <Compile Include="Game\Serving Area\Customer\ZYPokemonCustomer.cs" />
     <Compile Include="Game\Serving Area\Customer\ZYPokemonCustomerGenerator.cs" />
@@ -518,7 +517,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="GameResources\" />
+  </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
     <Copy SourceFiles="@(WinLibraryFiles)" DestinationFolder="$(OutDir)" />
