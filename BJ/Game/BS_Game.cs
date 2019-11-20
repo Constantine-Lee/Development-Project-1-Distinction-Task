@@ -54,7 +54,7 @@ namespace MyGame
 			//change view to end if give up button clicked
 			if (SwinGame.MouseClicked (MouseButton.LeftButton)) {
 				if (_giveUpButton.IsAt (SwinGame.MousePosition ())) {
-					_viewManager.View = _viewManager.ZYEnd;
+					_viewManager.View = _viewManager.BS_End;
 				}
 			}
 		}
