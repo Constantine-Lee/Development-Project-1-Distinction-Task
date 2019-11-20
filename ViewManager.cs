@@ -8,8 +8,6 @@ namespace MyGame
         private static ViewManager sViewManager;
         private Menu _menu;
         private Instruction _instruction;
-        private Settings _settings;
-        private BS_End _BSEnd;
         private ZYEnd _end;
         private MWEnd _MWEnd;
         private View _view;
@@ -27,8 +25,6 @@ namespace MyGame
             SwinGame.LoadResourceBundle("bundle.txt");
             _menu = new Menu(this);
             _instruction = new Instruction(this);
-            _settings = new Settings(this);
-            _BSEnd = new BS_End(this);
             _end = new ZYEnd(this);
             _easyMode = new ZYEasyMode(this);
             _mediumMode = new ZYMediumMode(this);
@@ -55,8 +51,6 @@ namespace MyGame
         {
             _menu.SetX(0);
             _instruction.SetX(0);
-            _settings.SetX(0);
-            _BSEnd.SetX(0);
             _end.SetX(0);
             _easyMode.SetX(0);
             _mediumMode.SetX(0);
@@ -71,8 +65,6 @@ namespace MyGame
         {
             _menu.SetY(0);
             _instruction.SetY(0);
-            _settings.SetY(0);
-            _BSEnd.SetY(0);
             _end.SetY(0);
             _easyMode.SetY(0);
             _mediumMode.SetY(0);
@@ -128,22 +120,10 @@ namespace MyGame
             set { _instruction = value; }
         }
 
-        public Settings Settings 
-        {
-            get { return _settings; }
-            set { _settings = value; }
-        }
-
         public ZYEnd ZYEnd
         {
             get { return _end; }
             set { _end = value; }
-        }
-
-        public BS_End BS_End
-        {
-            get { return _BSEnd; }
-            set { _BSEnd = value; }
         }
 
         public ZYMediumMode MediumMode
@@ -204,7 +184,7 @@ namespace MyGame
             set { _gameMode = value; }
         }
 
-        public ZYEasyMode EasyMode { get {return _easyMode; } set { _easyMode = value; } }
-        public MWEnd MWEnd { get {return _MWEnd; } set { _MWEnd = value; } }
+        public ZYEasyMode EasyMode { get => _easyMode; set => _easyMode = value; }
+        public MWEnd MWEnd { get => _MWEnd; set => _MWEnd = value; }
     }
 }

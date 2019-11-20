@@ -5,8 +5,6 @@ namespace MyGame
 	{
 		protected ViewManager _viewManager;
 
-        public View() { }
-
 		public View (ViewManager viewManager)
 		{
 			_viewManager = viewManager;
