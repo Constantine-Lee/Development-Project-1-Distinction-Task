@@ -21,7 +21,6 @@ namespace MyGame
         private MWGame _MWGame;
         private GameMode _gameMode;
         private BS_Game _BSGame;
-        private PauseScreenForEasy _pauseScreenForEasy;
 
         public ViewManager()
         {
@@ -39,7 +38,6 @@ namespace MyGame
             _MWGame = new MWGame(this);
             _gameMode = new GameMode(this);
             _BSGame = new BS_Game(this);
-            _pauseScreenForEasy = new PauseScreenForEasy(this);
             _easyMode.SetSpeed();
             _view = _menu;
         }
@@ -67,7 +65,6 @@ namespace MyGame
             _MWGame.SetX(0);
             _gameMode.SetX(0);
             _BSGame.SetX(0);
-            _pauseScreenForEasy.SetX(0);
         }
 
         public void SetY(int y)
@@ -84,14 +81,8 @@ namespace MyGame
             _MWGame.SetY(0);
             _gameMode.SetY(0);
             _BSGame.SetY(0);
-            _pauseScreenForEasy.SetY(0);
         }
 
-        public PauseScreenForEasy PauseScreenForEasy
-        {
-            get { return _pauseScreenForEasy; }
-            set { _pauseScreenForEasy = value; }
-        }
         public MWGame MWNewClassicGame()
         {
             MWGame game = new MWGame(this);

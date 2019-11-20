@@ -26,7 +26,7 @@ namespace MyGame
             _giveUpButton = new ZYButton("blue_button07.png");
             _giveUpButton.SetWidth(80);
             _giveUpButton.SetHeight(80);
-            _giveUpButton.SetText("Pause", 23);
+            _giveUpButton.SetText("Exit", 35);
 
             //Register for Observer Pattern
             foreach (ZYDiningTable diningTable in _servingArea.DiningTable)
@@ -75,18 +75,15 @@ namespace MyGame
             _servingArea.ProcessEvent();
             _sideBar.ProcessEvent();
 
-            if (SwinGame.TimerTicks(_gameTime) > 5)
-            {
-                _ticks = _ticks + 1;
-                SwinGame.ResetTimer(_gameTime);
-            }
-
+            // get the ticks from time passed
+            _ticks = SwinGame.TimerTicks(_gameTime) / 100;
+            
             //change view to end if give up button clicked
             if (SwinGame.MouseClicked(MouseButton.LeftButton))
             {
                 if (_giveUpButton.IsAt(SwinGame.MousePosition()))
                 {
-                    _viewManager.View = _viewManager.PauseScreenForEasy;
+                    _viewManager.View = _viewManager.ZYEnd;
                 }
             }
 
@@ -114,7 +111,7 @@ namespace MyGame
             _servingArea.SetY(y);
             _btmBar.SetY(y + 280);
             _giveUpButton.SetY(y + 295);
-            _giveUpButton.SetTextPositionY(y + 315);
+            _giveUpButton.SetTextPositionY(y + 310);
 
             _statusBar.SetY(y + 30);
         }
