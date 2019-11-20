@@ -31,7 +31,6 @@ namespace MyGame
             _settings = new Settings(this);
             _BSEnd = new BS_End(this);
             _end = new ZYEnd(this);
-            _MWEnd = new MWEnd(this);
             _easyMode = new ZYEasyMode(this);
             _mediumMode = new ZYMediumMode(this);
             _startMedium = new ZYStartMedium(this);
@@ -61,7 +60,6 @@ namespace MyGame
             _settings.SetX(0);
             _BSEnd.SetX(0);
             _end.SetX(0);
-            _MWEnd.SetX(0);
             _easyMode.SetX(0);
             _mediumMode.SetX(0);
             _startMedium.SetX(0);
@@ -79,7 +77,6 @@ namespace MyGame
             _settings.SetY(0);
             _BSEnd.SetY(0);
             _end.SetY(0);
-            _MWEnd.SetY(0);
             _easyMode.SetY(0);
             _mediumMode.SetY(0);
             _startMedium.SetY(0);
