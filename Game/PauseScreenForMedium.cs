@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using SwinGameSDK;
 
-namespace MyGame
+namespace MyGame.Game
 {
-    public class PauseScreenForMedium: View
+    class PauseScreenForMedium: View
     {
         private string _image;
         private ZYButton _gotoMenuButton;
