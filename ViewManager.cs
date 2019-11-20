@@ -192,10 +192,16 @@ namespace MyGame
 
         public ZYEasyMode NewZYGame()
         {
-            ZYEasyMode game = new ZYEasyMode(this);
-            game.SetX(0);
-            game.SetY(0);
-            return game;
+            _easyMode = new ZYEasyMode(this);
+            _mediumMode = new ZYMediumMode(this);
+            _difficultMode = new ZYDifficultMode(this);
+            _easyMode.SetX(0);
+            _easyMode.SetY(0);
+            _mediumMode.SetX(0);
+            _mediumMode.SetY(0);
+            _difficultMode.SetX(0);
+            _difficultMode.SetY(0);
+            return _easyMode;
         }
 
         public ZYMediumMode NewMediumMode()

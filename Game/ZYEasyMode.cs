@@ -10,7 +10,7 @@ namespace MyGame
         private EasyModeSideBar _sideBar;
         private ZYBottomBar _btmBar;
         private ZYButton _giveUpButton;
-        
+
         private Timer _gameTime;
         private uint _ticks;
         private ZYStatusBar _statusBar;
@@ -20,13 +20,13 @@ namespace MyGame
         {
             _sideBar = new EasyModeSideBar(_viewManager);
             _servingArea = new ZYServingArea();
-            
+
             _btmBar = new ZYBottomBar();
 
             _giveUpButton = new ZYButton("blue_button07.png");
             _giveUpButton.SetWidth(80);
             _giveUpButton.SetHeight(80);
-            _giveUpButton.SetText("Exit", 35);
+            _giveUpButton.SetText("Pause", 23);
 
             //Register for Observer Pattern
             foreach (ZYDiningTable diningTable in _servingArea.DiningTable)
@@ -61,7 +61,7 @@ namespace MyGame
             SwinGame.DrawText("Easy", Color.Black, "Arial", 15, 370, 10);
             SwinGame.DrawText("Medium", Color.Black, "Arial", 15, 440, 50);
             //draw the part of full bar based on the time passed. 
-            _statusBar.Draw((int)_ticks,365, 32);
+            _statusBar.Draw((int)_ticks, 365, 32);
         }
 
         public override void Update()
@@ -75,20 +75,23 @@ namespace MyGame
             _servingArea.ProcessEvent();
             _sideBar.ProcessEvent();
 
-            // get the ticks from time passed
-            _ticks = SwinGame.TimerTicks(_gameTime) / 100;
-            
+            if (SwinGame.TimerTicks(_gameTime) > 5)
+            {
+                _ticks = _ticks + 1;
+                SwinGame.ResetTimer(_gameTime);
+            }
+
             //change view to end if give up button clicked
             if (SwinGame.MouseClicked(MouseButton.LeftButton))
             {
                 if (_giveUpButton.IsAt(SwinGame.MousePosition()))
                 {
-                    _viewManager.View = _viewManager.ZYEnd;
+                    _viewManager.View = _viewManager.PauseScreenForEasy;
                 }
             }
 
             if (_ticks > 125)
-            {                
+            {
                 _viewManager.View = _viewManager.StartMedium;
             }
         }
@@ -111,7 +114,7 @@ namespace MyGame
             _servingArea.SetY(y);
             _btmBar.SetY(y + 280);
             _giveUpButton.SetY(y + 295);
-            _giveUpButton.SetTextPositionY(y + 310);
+            _giveUpButton.SetTextPositionY(y + 315);
 
             _statusBar.SetY(y + 30);
         }

@@ -87,6 +87,9 @@
     <Content Include="Resources\images\Health_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\pauseBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\startmedium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

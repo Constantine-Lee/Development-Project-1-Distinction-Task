@@ -43,7 +43,7 @@ namespace MyGame
             {
                 if (_gotoMenuButton.IsAt(SwinGame.MousePosition()))
                 {
-                    _viewManager.View = _viewManager.EasyMode;
+                    _viewManager.View = _viewManager.MediumMode;
                 }
             }
         }
