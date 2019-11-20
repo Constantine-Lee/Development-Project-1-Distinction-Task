@@ -7,16 +7,17 @@ namespace MyGame
     {
         private string _image;
         private BS_Button _gotoMenuButton;
-		private Sprite _menu;
+		private Resources _resource = new Resources();
+        private Sprite _menu;
 
         public Settings(ViewManager viewManager)
             : base(viewManager)
         {
 			//background Image
-			_image = BS_bgSelector.bg_img();
+			_image = _resource.imgOut(2);
             SwinGame.LoadBitmapNamed(_image, _image);
             _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed(_image));
-			//
+            //
 
             //Go to menu
             _gotoMenuButton = new BS_Button("grey_button06.png");
