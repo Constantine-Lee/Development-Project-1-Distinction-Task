@@ -1,49 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-
 namespace MyGame
 {
 	public class Resources
 	{
 
-		private List<string> _backgroundImage = new List<string>();
+		private string _backgroundImage;
 
+		public string BG { 
+			get { return _backgroundImage; }
+			set { _backgroundImage = value; }
+		}
 		public Resources()
 		{
-			_backgroundImage.Add("candybackground1.png");
-			_backgroundImage.Add("candybackground2.png");
-			_backgroundImage.Add("candybackground3.png");
-			_backgroundImage.Add("candybackground4.png");
-			_backgroundImage.Add("candybackground5.png");
-			_backgroundImage.Add("candybackground6.png");
-			_backgroundImage.Add("candybackground7.png");
-		}
-
-		public string imgOut(int img) 
-		{
-			switch (img) {
-				case (1):
-					return _backgroundImage[1];
-				case (2):
-					return _backgroundImage[2];
-				case (3):
-					return _backgroundImage[3];
-				case (4):
-					return _backgroundImage[4];
-				case (5):
-					return _backgroundImage[5];
-				case (6):
-					return _backgroundImage[6];
-				case (7):
-					return _backgroundImage[7];
-				default:
-					return _backgroundImage[1];
-			}
-		}
-
-		public int numOfImgs() 
-		{
-			return _backgroundImage.Count;
+			_backgroundImage = "pink_background.png";
 		}
 	}
 }

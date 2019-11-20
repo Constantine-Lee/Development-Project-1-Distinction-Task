@@ -13,8 +13,8 @@ namespace MyGame
         public Settings(ViewManager viewManager)
             : base(viewManager)
         {
-			//background Image
-			_image = _resource.imgOut(2);
+            //background Image
+			_image = _resource.BG;
             SwinGame.LoadBitmapNamed(_image, _image);
             _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed(_image));
             //
