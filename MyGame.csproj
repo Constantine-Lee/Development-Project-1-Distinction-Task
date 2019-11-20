@@ -175,12 +175,10 @@
     <Compile Include="MW\Game\Side Bar\MWSideBarUpdate.cs" />
     <Compile Include="MW\Menu\GameMode.cs" />
     <Compile Include="MW\Menu\MWButton.cs" />
-    <Compile Include="Settings\Settings.cs" />
     <Compile Include="src\GameMain.cs" />
     <Compile Include="ViewManager.cs" />
     <Compile Include="View.cs" />
     <Compile Include="Instruction\Instruction.cs" />
-    <Compile Include="GameResources\Resources.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -491,15 +489,6 @@
     <None Include="Resources\images\meowth.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\images\pink_background.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\images\Yellow background.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GameResources\" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />

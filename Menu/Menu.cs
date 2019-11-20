@@ -10,11 +10,10 @@ namespace MyGame
         private BS_Button _settingsButton;
         private Sprite _menu;
         private string _backgroundImage;
-		private Resources _resource = new Resources();
 
         public Menu(ViewManager viewManager) : base(viewManager)
         {
-			_backgroundImage = _resource.BG;
+            _backgroundImage = "game_menu.jpg";
             SwinGame.LoadBitmapNamed(_backgroundImage, _backgroundImage);
             _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed(_backgroundImage));
 
@@ -64,7 +63,8 @@ namespace MyGame
             }
         }
 
-		//x = 0
+
+        //x = 0
         public void SetX(int x)
         {
             _startButton.SetX(x + 50);
