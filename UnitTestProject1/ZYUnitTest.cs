@@ -21,10 +21,5 @@ namespace UnitTestProject1
             ZYGameLife zYGameLife = new ZYGameLife();
             Assert.AreEqual(100, zYGameLife.Width);
         }
-
-        [TestMethod]
-        public void TestPauseScreen()
-        {
-        }
     }
 }
