@@ -8,11 +8,12 @@ namespace MyGame
         private ZYButton _startButton;
         private ZYButton _instructionButton;
         private Sprite _menu;
+        private BS_Button _settingsButton;
         private string _backgroundImage;
 
         public Menu(ViewManager viewManager) : base(viewManager)
         {
-            _backgroundImage = "game_menu.jpg";
+            _backgroundImage = BS_bgSelector.bg_img();
             SwinGame.LoadBitmapNamed(_backgroundImage, _backgroundImage);
             _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed(_backgroundImage));
 
@@ -20,6 +21,11 @@ namespace MyGame
             _startButton.SetWidth(191);
             _startButton.SetHeight(49);
             _startButton.SetText("     Start     ", 33);
+
+            _settingsButton = new BS_Button("grey_button06.png");
+            _settingsButton.SetWidth(191);
+            _settingsButton.SetHeight(49);
+            _settingsButton.SetText("   Settings  ", 33);
 
             _instructionButton = new ZYButton("grey_button06.png");
             _instructionButton.SetWidth(191);
@@ -32,6 +38,7 @@ namespace MyGame
             SwinGame.DrawSprite(_menu);
             _startButton.Draw();
             _instructionButton.Draw();
+            _settingsButton.Draw();
         }
 
         public override void Update()
@@ -50,6 +57,10 @@ namespace MyGame
                 {
                     _viewManager.View = _viewManager.Instruction;
                 }
+                if (_settingsButton.IsAt(SwinGame.MousePosition()))
+                {
+                    _viewManager.View = _viewManager.Settings;
+                }
             }
         }
 
@@ -62,6 +73,9 @@ namespace MyGame
 
             _instructionButton.SetX(x + 50);
             _instructionButton.SetTextPositionX(x + 58);
+
+            _settingsButton.SetX(x + 50);
+            _settingsButton.SetTextPositionX(x + 58);
         }
 
         //y = 0
@@ -72,6 +86,9 @@ namespace MyGame
 
             _instructionButton.SetY(y + 170);
             _instructionButton.SetTextPositionY(y + 175);
+
+            _settingsButton.SetY(y + 240);
+            _settingsButton.SetTextPositionY(y + 245);
         }
 
     }

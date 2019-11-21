@@ -18,6 +18,7 @@ namespace MyGame
         private ZYStartMedium _startMedium;
         private ZYDifficultMode _difficultMode;
         private ZYStartDifficult _startDifficult;
+        private Settings _settings;
         private MWGame _MWGame;
         private GameMode _gameMode;
         private BS_Game _BSGame;
@@ -29,6 +30,7 @@ namespace MyGame
             SwinGame.LoadResourceBundle("bundle.txt");
             _menu = new Menu(this);
             _instruction = new Instruction(this);
+            _settings = new Settings(this);
             
             _BSEnd = new BS_End(this);
             _end = new ZYEnd(this);
@@ -60,6 +62,7 @@ namespace MyGame
         {
             _menu.SetX(0);
             _instruction.SetX(0);
+            _settings.SetX(0);
            
             _BSEnd.SetX(0);
             _end.SetX(0);
@@ -79,6 +82,7 @@ namespace MyGame
         {
             _menu.SetY(0);
             _instruction.SetY(0);
+            _settings.SetY(0);
             
             _BSEnd.SetY(0);
             _end.SetY(0);
@@ -104,6 +108,11 @@ namespace MyGame
         {
             get { return _pauseScreenForMedium; }
             set { _pauseScreenForMedium = value; }
+        }
+
+        public Settings Settings {
+            get { return _settings; }
+            set { _settings = value; }
         }
 
         public MWGame MWNewClassicGame()

@@ -18,8 +18,8 @@ namespace MyGame
 
         public GameMode (ViewManager viewManager) : base (viewManager)
 		{
-			_backgroundImage = "Tutorial-game-interface-001.jpg";
-			SwinGame.LoadBitmapNamed (_backgroundImage, _backgroundImage);
+            _backgroundImage = BS_bgSelector.bg_img();
+            SwinGame.LoadBitmapNamed (_backgroundImage, _backgroundImage);
 			_gameMode = SwinGame.CreateSprite (SwinGame.BitmapNamed (_backgroundImage));
 
 			_classicButton = new MWButton ("grey_button06.png");
