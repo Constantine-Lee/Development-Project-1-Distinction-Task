@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyGame;
+using SwinGameSDK;
 
 namespace UnitTestProject1
 {
@@ -27,6 +28,13 @@ namespace UnitTestProject1
         {
             ZYPlayer.Image = "male.png";
             Assert.AreEqual("male.png", ZYPlayer.Image);
+        }
+
+        [TestMethod]
+        public void TestPlayerImageSpriteExist()
+        {
+            SwinGame.LoadBitmapNamed("Player", "female.png");
+            Assert.IsNotNull(SwinGame.BitmapNamed("Player"));
         }
     }
 }

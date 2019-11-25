@@ -19,8 +19,7 @@ namespace MyGame
         }
 
         public ZYPlayer ()
-		{
-            
+		{            
             _movement = new ZYMovement ();
 			_holdingFoodName = "";
             SwinGame.LoadBitmapNamed("Player", "ASH");
