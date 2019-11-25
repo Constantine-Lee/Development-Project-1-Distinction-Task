@@ -43,5 +43,12 @@ namespace UnitTestProject1
             ZYCharacterInterface zYCharacterInterface = new ZYCharacterInterface();
             Assert.IsNotNull(zYCharacterInterface);
         }
+
+        [TestMethod]
+        public void TestCharacterInterfaceBackground()
+        {
+            SwinGame.LoadBitmapNamed("CIBackground", "characterSelectionBackground.jpg");
+            Assert.IsNotNull(SwinGame.BitmapNamed("CIBackground"));
+        }
     }
 }
