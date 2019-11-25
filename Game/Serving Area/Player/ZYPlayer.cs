@@ -10,14 +10,14 @@ namespace MyGame
 
 		private ZYMovement _movement;
 		private ZYHoldingFoodFrame _holdingFoodFrame;
-/*        private static String _image;
+        private static String _image;
 
         public static String Image
         {
             get { return _image; }
             set { _image = value; }
         }
-*/
+
         public ZYPlayer ()
 		{
             
