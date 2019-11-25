@@ -22,8 +22,7 @@ namespace MyGame
 		{            
             _movement = new ZYMovement ();
 			_holdingFoodName = "";
-            SwinGame.LoadBitmapNamed("Player", "ASH");
-            _player = SwinGame.CreateSprite(SwinGame.BitmapNamed("Player"), SwinGame.AnimationScriptNamed("WalkingScript"));
+            _player = SwinGame.CreateSprite(SwinGame.BitmapNamed(_image), SwinGame.AnimationScriptNamed("WalkingScript"));
         }
 
 		public void SetX (int x)

@@ -55,12 +55,12 @@ namespace MyGame
             {
                 if (_maleButton.IsAt(SwinGame.MousePosition()))
                 {
-                    ZYPlayer.Image = "ASH.png";
+                    ZYPlayer.Image = "Player";
                     _viewManager.View = _viewManager.NewZYGame();
                 }
                 if (_femaleButton.IsAt(SwinGame.MousePosition()))
                 {
-                    ZYPlayer.Image = "female.png";
+                    ZYPlayer.Image = "female";
                     _viewManager.View = _viewManager.NewZYGame();
                 }
             }
