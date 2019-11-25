@@ -182,6 +182,7 @@
     <Compile Include="Game\SideBar\ZYHoldingFoodFrame.cs" />
     <Compile Include="Game\SideBar\ZYSideBar.cs" />
     <Compile Include="Game\SideBar\ZYSideBarInterface.cs" />
+    <Compile Include="Game\ZYCharacterInterface.cs" />
     <Compile Include="Game\ZYDifficultMode.cs" />
     <Compile Include="Game\ZYEasyMode.cs" />
     <Compile Include="Game\ZYMediumMode.cs" />
