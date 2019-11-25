@@ -1,17 +1,23 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyGame;
+using System.IO;
 
 namespace UnitTestProject1
 {
     [TestClass]
     public class BS_Test1
     {
-        BS_SideBar _sideBar = new BS_SideBar();
+       
         [TestMethod]
-        public void TestMethod1()
+        public void WalkingSoundFilePresenceTest()
         {
-            Assert.AreEqual(_sideBar.FullLifeCheck(), true);
+            File.Exists("Resources/sounds/walking.ogg");
+        }
+
+        [TestMethod]
+        public void LowHPSoundFilePresenceTest() {
+            File.Exists("Resources/sounds/low_hp.wav");
         }
     }
 }
