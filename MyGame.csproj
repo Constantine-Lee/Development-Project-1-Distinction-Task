@@ -105,6 +105,9 @@
     <Content Include="Resources\images\candybackground7.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\characterSelectionBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\female.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
