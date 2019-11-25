@@ -14,7 +14,7 @@ namespace MyGame
 		private Sprite _floor;
 		private Sprite _dustbin;
 
-		private Player _player;
+		private ZYPlayer _player;
 
 		private ZYTableOfStove [] _tableOfStoves;
 		private ZYDiningTable [] _diningTables;
@@ -73,7 +73,7 @@ namespace MyGame
 			_dustbin = SwinGame.CreateSprite (SwinGame.BitmapNamed ("sink"));
 			//
 
-			_player = new Player ();
+			_player = new ZYPlayer ();
 			_player.SetX (140);
 			_player.SetY (120);
 		}
@@ -103,7 +103,7 @@ namespace MyGame
 			set { _stove = value; }
 		}
 
-		public Player Player {
+		public ZYPlayer Player {
 			get { return _player; }
 			set { _player = value; }
 		}

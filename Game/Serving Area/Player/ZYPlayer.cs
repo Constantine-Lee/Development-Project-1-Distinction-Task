@@ -3,20 +3,29 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class Player
+	public class ZYPlayer
 	{
 		private Sprite _player;
 		private string _holdingFoodName;
 
 		private ZYMovement _movement;
 		private ZYHoldingFoodFrame _holdingFoodFrame;
+/*        private static String _image;
 
-		public Player ()
+        public static String Image
+        {
+            get { return _image; }
+            set { _image = value; }
+        }
+*/
+        public ZYPlayer ()
 		{
-			_movement = new ZYMovement ();
+            
+            _movement = new ZYMovement ();
 			_holdingFoodName = "";
-			_player = SwinGame.CreateSprite (SwinGame.BitmapNamed ("Player"), SwinGame.AnimationScriptNamed ("WalkingScript"));
-		}
+            SwinGame.LoadBitmapNamed("Player", "ASH");
+            _player = SwinGame.CreateSprite(SwinGame.BitmapNamed("Player"), SwinGame.AnimationScriptNamed("WalkingScript"));
+        }
 
 		public void SetX (int x)
 		{

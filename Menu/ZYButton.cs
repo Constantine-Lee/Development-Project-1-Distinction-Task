@@ -26,6 +26,7 @@ namespace MyGame
                 return true;
             }catch(Exception e)
             {
+                Console.WriteLine(e.ToString());
                 return false;
             }
 		}
@@ -38,6 +39,7 @@ namespace MyGame
                 return true;
             }catch(Exception e)
             {
+                Console.WriteLine(e.ToString());
                 return false;
             }
 		}
@@ -50,6 +52,7 @@ namespace MyGame
                 return true;
             }catch(Exception e)
             {
+                Console.WriteLine(e.ToString());
                 return false;
             }
 		}
@@ -62,6 +65,7 @@ namespace MyGame
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
                 return false;
             }
 			

@@ -21,5 +21,12 @@ namespace UnitTestProject1
             ZYGameLife zYGameLife = new ZYGameLife();
             Assert.AreEqual(100, zYGameLife.Width);
         }
+
+        [TestMethod]
+        public void TestPlayerImage()
+        {
+            ZYPlayer.Image = "male.png";
+            Assert.AreEqual("male.png", ZYPlayer.Image);
+        }
     }
 }
