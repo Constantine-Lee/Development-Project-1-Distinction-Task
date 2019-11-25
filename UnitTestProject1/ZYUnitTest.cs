@@ -36,5 +36,12 @@ namespace UnitTestProject1
             SwinGame.LoadBitmapNamed("Player", "female.png");
             Assert.IsNotNull(SwinGame.BitmapNamed("Player"));
         }
+
+        [TestMethod]
+        public void TestCharacterInterface()
+        {
+            ZYCharacterInterface zYCharacterInterface = new ZYCharacterInterface();
+            Assert.IsNotNull(zYCharacterInterface);
+        }
     }
 }
