@@ -4,18 +4,18 @@ using SwinGameSDK;
 namespace MyGame
 {
 
-    public class ZYcharacterSelection : View
+    public class ZYCharacterInterface : View
     {
         private string _image;
         private ZYButton _maleButton;
         private ZYButton _femaleButton;
         private Sprite _menu;
 
-        public ZYcharacterSelection()
+        public ZYCharacterInterface()
         {
         }
 
-        public ZYcharacterSelection(ViewManager viewManager) : base(viewManager)
+        public ZYCharacterInterface(ViewManager viewManager) : base(viewManager)
         {
             //background Image
             _image = "characterSelectionBackground.jpg";
