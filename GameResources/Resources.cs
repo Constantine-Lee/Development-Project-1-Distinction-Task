@@ -23,21 +23,21 @@ namespace MyGame
 		{
 			switch (img) {
 				case (1):
-					return _backgroundImage[1];
+					return _backgroundImage[0];
 				case (2):
-					return _backgroundImage[2];
-				case (3):
-					return _backgroundImage[3];
-				case (4):
-					return _backgroundImage[4];
-				case (5):
-					return _backgroundImage[5];
-				case (6):
-					return _backgroundImage[6];
-				case (7):
-					return _backgroundImage[7];
-				default:
 					return _backgroundImage[1];
+				case (3):
+					return _backgroundImage[2];
+				case (4):
+					return _backgroundImage[3];
+				case (5):
+					return _backgroundImage[4];
+				case (6):
+					return _backgroundImage[5];
+				case (7):
+					return _backgroundImage[6];
+				default:
+					return _backgroundImage[0];
 			}
 		}
 
