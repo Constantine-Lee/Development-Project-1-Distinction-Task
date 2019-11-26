@@ -50,5 +50,12 @@ namespace UnitTestProject1
             SwinGame.LoadBitmapNamed("CIBackground", "characterSelectionBackground.jpg");
             Assert.IsNotNull(SwinGame.BitmapNamed("CIBackground"));
         }
+
+        [TestMethod]
+        public void TestStartDifficultyModeBackground()
+        {
+            SwinGame.LoadBitmapNamed("SDBackground", "hell.png");
+            Assert.IsNotNull(SwinGame.BitmapNamed("SDBackground"));
+        }
     }
 }
