@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using SwinGameSDK;
 
 namespace MyGame
 {
@@ -17,6 +18,8 @@ namespace MyGame
 			_backgroundImage.Add("candybackground5.png");
 			_backgroundImage.Add("candybackground6.png");
 			_backgroundImage.Add("candybackground7.png");
+            Audio.LoadSoundEffectNamed("walking","walking.ogg");
+            Audio.LoadSoundEffectNamed("HP_low","low_hp.wav");
 		}
 
 		public static string imgOut(int img) 

@@ -55,6 +55,10 @@ namespace MyGame
 
 		public void Draw ()
 		{
+            if (_life < 3) {
+                Audio.PlaySoundEffect("HP_low",(float)0.5);
+               // SwinGame.Delay((int)500);
+            }
 			_ticks = SwinGame.TimerTicks (_gameTime)/100;
 			SwinGame.DrawSprite (_sideBar);
 			_gameLife.Draw ();
@@ -92,7 +96,7 @@ namespace MyGame
 		public void ProcessEvent ()
 		{
 			if (_life <= 0) {
-				_viewManager.View = _viewManager.ZYEnd;
+				_viewManager.View = _viewManager.BS_End;
 			}
 		}
 

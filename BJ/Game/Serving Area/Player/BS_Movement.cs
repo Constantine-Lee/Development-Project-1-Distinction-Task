@@ -71,9 +71,11 @@ namespace MyGame
 				Walk (_player, KeyCode.vk_s, "WalkFront", 0, +_speed);
 				Walk (_player, KeyCode.vk_a, "WalkLeft", -_speed, 0);
 				Walk (_player, KeyCode.vk_d, "WalkRight", +_speed, 0);
-
+                //Audio.PlaySoundEffect("walking");
+                //walking(_player);
 				SwinGame.UpdateSprite (_player);
 			}
+
 		}
 
 		// move the player according to the argument sent in. Code reference to Swingame.com
@@ -85,11 +87,25 @@ namespace MyGame
 						_ticks = _ticks - 2;
 					}
 				}
+                walking(sprt);
+                //Audio.PlaySoundEffect("walking", (float)0.1);
 				SwinGame.SpriteStartAnimation (sprt, _animation);
 				SwinGame.SpriteSetDX (sprt, (float)dx);
 				SwinGame.SpriteSetDY (sprt, (float)dy);
 			}
+            //Audio.PlaySoundEffect("walking");
 		}
+
+        public void walking(Sprite _player) {
+            if (_player.X + _player.Width != 55 || _player.Y + _player.Height != 135 ||
+                _player.Y + _player.Height != 210 && _player.X + _player.Width != 255 ||
+                _player.Y + _player.Height != 280 || _player.Y + _player.Height != 220 ||
+                _player.X + _player.Width != 360 )
+            {
+                Audio.PlaySoundEffect("walking",(float)0.09);
+            }
+            
+        }
 
 		//restrict the movement of player
 		public void Boundary (Sprite _player)
