@@ -64,5 +64,12 @@ namespace UnitTestProject1
             SwinGame.LoadBitmapNamed("HDDBackground", "doom.jpg");
             Assert.IsNotNull(SwinGame.BitmapNamed("HDDBackground"));
         }
+
+        [TestMethod]
+        public void TestMediumDifficultyModePurpleStormBackground()
+        {
+            SwinGame.LoadBitmapNamed("MDDBackground", "purpleStorm.jpg");
+            Assert.IsNotNull(SwinGame.BitmapNamed("MDDBackground"));
+        }
     }
 }
