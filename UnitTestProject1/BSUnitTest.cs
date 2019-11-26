@@ -12,12 +12,14 @@ namespace UnitTestProject1
         [TestMethod]
         public void WalkingSoundFilePresenceTest()
         {
-            File.Exists(SwinGameSDK.Resources.PathToResource("walking.ogg"));
+           bool check = File.Exists("Resources/sounds/walking.ogg");
+            Assert.IsTrue(check);
         }
 
         [TestMethod]
         public void LowHPSoundFilePresenceTest() {
-            File.Exists(SwinGameSDK.Resources.PathToResource("low_hp.wav"));
+            bool check = File.Exists("Resources/sounds/low_hp.wav");
+            Assert.IsTrue(check);
         }
     }
 }
