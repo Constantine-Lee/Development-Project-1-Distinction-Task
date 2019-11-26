@@ -12,7 +12,7 @@ namespace MyGame
         public ZYStartDifficult(ViewManager viewManager) : base(viewManager)
         {
             //background Image
-            _image = "startmedium.png";
+            _image = "hell.png";
             SwinGame.LoadBitmapNamed(_image, _image);
             _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed(_image));
             //
