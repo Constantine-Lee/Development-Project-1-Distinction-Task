@@ -108,6 +108,9 @@
     <Content Include="Resources\images\characterSelectionBackground.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\doom.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\female.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -182,6 +185,7 @@
     <Compile Include="Game\Serving Area\Stove\ZYStoveManager.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYTableOfStove.cs" />
     <Compile Include="Game\Serving Area\ZYServingArea.cs" />
+    <Compile Include="Game\Serving Area\ZYServingAreaDifficult.cs" />
     <Compile Include="Game\Serving Area\ZYStatusBar.cs" />
     <Compile Include="Game\SideBar\ZYEasyModeSideBar.cs" />
     <Compile Include="Game\SideBar\ZYGameLife.cs" />

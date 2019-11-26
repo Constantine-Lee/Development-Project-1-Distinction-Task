@@ -6,7 +6,7 @@ namespace MyGame
 {
     public class ZYDifficultMode : View
     {
-        private ZYServingArea _servingArea;
+        private ZYServingAreaDifficult _servingArea;
         private ZYSideBar _sideBar;
         private ZYBottomBar _btmBar;
         private ZYButton _giveUpButton;
@@ -17,7 +17,7 @@ namespace MyGame
         public ZYDifficultMode(ViewManager viewManager) : base(viewManager)
         {
             _sideBar = new ZYSideBar(_viewManager);
-            _servingArea = new ZYServingArea();
+            _servingArea = new ZYServingAreaDifficult();
 
             _btmBar = new ZYBottomBar();
 
