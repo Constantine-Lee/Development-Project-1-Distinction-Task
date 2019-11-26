@@ -132,6 +132,9 @@
     <Content Include="Resources\images\pauseBackground.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\purpleStorm.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\startmedium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -186,6 +189,7 @@
     <Compile Include="Game\Serving Area\Stove\ZYTableOfStove.cs" />
     <Compile Include="Game\Serving Area\ZYServingArea.cs" />
     <Compile Include="Game\Serving Area\ZYServingAreaDifficult.cs" />
+    <Compile Include="Game\Serving Area\ZYServingAreaMedium.cs" />
     <Compile Include="Game\Serving Area\ZYStatusBar.cs" />
     <Compile Include="Game\SideBar\ZYEasyModeSideBar.cs" />
     <Compile Include="Game\SideBar\ZYGameLife.cs" />

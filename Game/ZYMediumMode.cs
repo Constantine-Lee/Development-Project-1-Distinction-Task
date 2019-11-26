@@ -6,7 +6,7 @@ namespace MyGame
 {
     public class ZYMediumMode : View
     {
-        private ZYServingArea _servingArea;
+        private ZYServingAreaMedium _servingArea;
         private EasyModeSideBar _sideBar;
         private ZYBottomBar _btmBar;
         private ZYButton _giveUpButton;
@@ -18,7 +18,7 @@ namespace MyGame
         public ZYMediumMode(ViewManager viewManager) : base(viewManager)
         {
             _sideBar = new EasyModeSideBar(_viewManager);
-            _servingArea = new ZYServingArea();
+            _servingArea = new ZYServingAreaMedium();
 
             _btmBar = new ZYBottomBar();
 
