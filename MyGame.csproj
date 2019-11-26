@@ -105,6 +105,12 @@
     <Content Include="Resources\images\candybackground7.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\characterSelectionBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\images\female.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\flatDark23_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -179,6 +185,7 @@
     <Compile Include="Game\SideBar\ZYHoldingFoodFrame.cs" />
     <Compile Include="Game\SideBar\ZYSideBar.cs" />
     <Compile Include="Game\SideBar\ZYSideBarInterface.cs" />
+    <Compile Include="Game\ZYCharacterInterface.cs" />
     <Compile Include="Game\ZYDifficultMode.cs" />
     <Compile Include="Game\ZYEasyMode.cs" />
     <Compile Include="Game\ZYMediumMode.cs" />

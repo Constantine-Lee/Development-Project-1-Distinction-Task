@@ -66,7 +66,7 @@ namespace MyGame
                 }
                 if (_survivalButton.IsAt(SwinGame.MousePosition()))
                 {
-                    _viewManager.View = _viewManager.NewZYGame();
+                    _viewManager.View = _viewManager.ZYCharacterInterface;
                 }
                 if (_casualButton.IsAt(SwinGame.MousePosition()))
                 {

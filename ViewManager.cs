@@ -24,6 +24,7 @@ namespace MyGame
         private BS_Game _BSGame;
         private PauseScreenForEasy _pauseScreenForEasy;
         private PauseScreenForMedium _pauseScreenForMedium;
+        private ZYCharacterInterface _zYcharacterSelection;
 
         public ViewManager()
         {
@@ -45,6 +46,7 @@ namespace MyGame
             _BSGame = new BS_Game(this);
             _pauseScreenForEasy = new PauseScreenForEasy(this);
             _pauseScreenForMedium = new PauseScreenForMedium(this);
+            _zYcharacterSelection = new ZYCharacterInterface(this);
             _easyMode.SetSpeed();
             _view = _menu;
         }
@@ -76,6 +78,7 @@ namespace MyGame
             _BSGame.SetX(0);
             _pauseScreenForEasy.SetX(0);
             _pauseScreenForMedium.SetX(0);
+            _zYcharacterSelection.SetX(0);
         }
 
         public void SetY(int y)
@@ -96,6 +99,13 @@ namespace MyGame
             _BSGame.SetY(0);
             _pauseScreenForEasy.SetY(0);
             _pauseScreenForMedium.SetY(0);
+            _zYcharacterSelection.SetY(0);
+        }
+
+        public ZYCharacterInterface ZYCharacterInterface
+        {
+            get { return _zYcharacterSelection; }
+            set { _zYcharacterSelection = value; }
         }
 
         public PauseScreenForEasy PauseScreenForEasy

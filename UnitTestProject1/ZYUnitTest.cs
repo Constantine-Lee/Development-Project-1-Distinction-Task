@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyGame;
+using SwinGameSDK;
 
 namespace UnitTestProject1
 {
@@ -20,6 +21,34 @@ namespace UnitTestProject1
         {
             ZYGameLife zYGameLife = new ZYGameLife();
             Assert.AreEqual(100, zYGameLife.Width);
+        }
+
+        [TestMethod]
+        public void TestPlayerImage()
+        {
+            ZYPlayer.Image = "male.png";
+            Assert.AreEqual("male.png", ZYPlayer.Image);
+        }
+
+        [TestMethod]
+        public void TestPlayerImageSpriteExist()
+        {
+            SwinGame.LoadBitmapNamed("Player", "female.png");
+            Assert.IsNotNull(SwinGame.BitmapNamed("Player"));
+        }
+
+        [TestMethod]
+        public void TestCharacterInterface()
+        {
+            ZYCharacterInterface zYCharacterInterface = new ZYCharacterInterface();
+            Assert.IsNotNull(zYCharacterInterface);
+        }
+
+        [TestMethod]
+        public void TestCharacterInterfaceBackground()
+        {
+            SwinGame.LoadBitmapNamed("CIBackground", "characterSelectionBackground.jpg");
+            Assert.IsNotNull(SwinGame.BitmapNamed("CIBackground"));
         }
     }
 }
