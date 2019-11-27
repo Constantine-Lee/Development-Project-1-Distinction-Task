@@ -15,7 +15,7 @@ namespace UnitTestProject1
         public void TestDiningTableSetX()
         {
             _diningtable.SetX(0);
-            Assert.AreEqual(_diningtable.DiningTableSprite.X,0);
+            Assert.AreEqual(_diningtable.DiningTableSprite.X, 0);
         }
 
         [TestMethod]
@@ -48,3 +48,4 @@ namespace UnitTestProject1
             Assert.IsNotNull(MWCustomerSelection);
         }
     }
+}
