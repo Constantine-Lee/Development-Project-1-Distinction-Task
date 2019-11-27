@@ -52,8 +52,19 @@ namespace UnitTestProject1
         [TestMethod]
         public void CustomerImageExistTest()
         {
-            bool check = File.Exists("Resources/images/daisy.png");
-            Assert.IsTrue(check);
+            bool check1 = File.Exists("Resources/images/daisy.png");
+            bool check2 = File.Exists("Resources/images/luigi.png");
+            bool check3 = File.Exists("Resources/images/mario.png");
+            bool check4 = File.Exists("Resources/images/mushroom.png");
+            bool check5 = File.Exists("Resources/images/pinkmushroom.png");
+            bool check6 = File.Exists("Resources/images/yoshi.png");
+
+            Assert.IsTrue(check1);
+            Assert.IsTrue(check2);
+            Assert.IsTrue(check3);
+            Assert.IsTrue(check4);
+            Assert.IsTrue(check5);
+            Assert.IsTrue(check6);
         }
     }
 }

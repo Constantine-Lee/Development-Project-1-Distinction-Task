@@ -210,6 +210,8 @@
     <Compile Include="MW\Game\MWCustomerSelection.cs" />
     <Compile Include="MW\Game\MWGame.cs" />
     <Compile Include="MW\Game\Serving Area\Customer\MWCustomer.cs" />
+    <Compile Include="MW\Game\Serving Area\Customer\MWMarioCustomer.cs" />
+    <Compile Include="MW\Game\Serving Area\Customer\MWMarioCustomerGenerator.cs" />
     <Compile Include="MW\Game\Serving Area\Customer\MWPokemonCustomer.cs" />
     <Compile Include="MW\Game\Serving Area\Customer\MWPokemonCustomerGenerator.cs" />
     <Compile Include="MW\Game\Serving Area\Customer\MWWish.cs" />

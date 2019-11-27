@@ -31,7 +31,7 @@ namespace MyGame
 			_food = SwinGame.CreateSprite (SwinGame.BitmapNamed (""));
 
 			//get a new customer
-			_customer = MWPokemonCustomerGenerator.NewCustomer ();
+			_customer = MWMarioCustomerGenerator.NewCustomer ();
 
 			//initialize Timer and start it for the first customer, set ticks to 0 and set the state of customer as waiting
 			_gameTime = SwinGame.CreateTimer ();
@@ -133,7 +133,7 @@ namespace MyGame
 				}
 				//old customer rage and leave if the bar reach full. Decrease 0.5 heart life and get a new customer.
 				if (_ticks >= 42) {
-					_customer = MWPokemonCustomerGenerator.NewCustomer ();
+					_customer = MWMarioCustomerGenerator.NewCustomer ();
 					_customer.SetX (_diningTable.X + 20);
 					_customer.SetY (_diningTable.Y - 40);
 					_ticks = 0;
@@ -147,7 +147,7 @@ namespace MyGame
 				}
 				if (_ticks < 0) {
 					SetFood ("");
-					_customer = MWPokemonCustomerGenerator.NewCustomer ();
+					_customer = MWMarioCustomerGenerator.NewCustomer ();
 					_customer.SetX (_diningTable.X + 20);
 					_customer.SetY (_diningTable.Y - 40);
 					_waiting = true;
