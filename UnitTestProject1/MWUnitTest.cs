@@ -40,5 +40,11 @@ namespace UnitTestProject1
             __sidebarUpdate.AddScore();
             Assert.AreEqual(100, MWSideBarUpdate.Score);
         }
+
+        [TestMethod]
+        public void TestCustomerSelection()
+        {
+            MWCustomerSelection zYCharacterInterface = new MWCustomerSelection();
+            Assert.IsNotNull(MWCustomerSelection);
+        }
     }
-}
