@@ -44,8 +44,8 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestCustomerSelection()
         {
-            MWCustomerSelection zYCharacterInterface = new MWCustomerSelection();
-            Assert.IsNotNull(MWCustomerSelection);
+            MWCustomerSelection mWCustomerSelection = new MWCustomerSelection();
+            Assert.IsNotNull(mWCustomerSelection);
         }
     }
 }
