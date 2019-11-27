@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyGame;
 using SwinGameSDK;
+using System.IO;
 
 namespace UnitTestProject1
 {
@@ -46,6 +47,13 @@ namespace UnitTestProject1
         {
             MWCustomerSelection mWCustomerSelection = new MWCustomerSelection();
             Assert.IsNotNull(mWCustomerSelection);
+        }
+
+        [TestMethod]
+        public void CustomerImageExistTest()
+        {
+            bool check = File.Exists("Resources/images/daisy.png");
+            Assert.IsTrue(check);
         }
     }
 }
