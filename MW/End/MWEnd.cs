@@ -39,10 +39,12 @@ namespace MyGame
 
 		public override void ProcessEvent ()
 		{
-			if (SwinGame.MouseClicked (MouseButton.LeftButton)) {
+            SwinGame.StopMusic();
+            if (SwinGame.MouseClicked (MouseButton.LeftButton)) {
 				if (_gotoMenuButton.IsAt (SwinGame.MousePosition ())) {
 					_viewManager.View = _viewManager.Menu;
-				}
+                    SwinGame.PlayMusic("Mountain.mp3");
+                }
 			}
 			if (SwinGame.KeyTyped (KeyCode.vk_F12)) {
 				SwinGame.ToggleFullScreen ();

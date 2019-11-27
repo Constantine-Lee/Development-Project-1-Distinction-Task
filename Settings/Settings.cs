@@ -11,6 +11,10 @@ namespace MyGame
 		private BS_Button _previousImgButton;
 		private Sprite _menu;
 
+        private MWButton _BGM1Button;
+        private MWButton _BGM2Button;
+        private MWButton _stopBGMButton;
+
         public Settings(ViewManager viewManager)
             : base(viewManager)
         {
@@ -30,6 +34,24 @@ namespace MyGame
 			_previousImgButton.SetWidth(30);
 			_previousImgButton.SetHeight(30);
 
+            //BGM1 button
+            _BGM1Button = new MWButton("red_button2.png");
+            _BGM1Button.SetWidth(80);
+            _BGM1Button.SetHeight(40);
+            _BGM1Button.SetText("Adventure", 15);
+
+            //BGM2 button
+            _BGM2Button = new MWButton("red_button2.png");
+            _BGM2Button.SetWidth(80);
+            _BGM2Button.SetHeight(40);
+            _BGM2Button.SetText(" Fantasy ", 15);
+
+            //stop BGM button
+            _stopBGMButton = new MWButton("red_button2.png");
+            _stopBGMButton.SetWidth(80);
+            _stopBGMButton.SetHeight(40);
+            _stopBGMButton.SetText("No Music", 15);
+
             //Go to menu
             _gotoMenuButton = new BS_Button("grey_button06.png");
             _gotoMenuButton.SetWidth(191);
@@ -46,6 +68,9 @@ namespace MyGame
 			_gotoMenuButton.Draw();
 			_nextImgButton.Draw();
 			_previousImgButton.Draw();
+            _BGM1Button.Draw();
+            _BGM2Button.Draw();
+            _stopBGMButton.Draw();
         }
 
         public override void Update()
@@ -80,6 +105,22 @@ namespace MyGame
 						_menu = SwinGame.CreateSprite (SwinGame.LoadBitmap (_image));
 					}
 				}
+                if (_BGM1Button.IsAt(SwinGame.MousePosition()))
+                {
+                    SwinGame.StopMusic();
+                    SwinGame.LoadMusic("Mountain.mp3");
+                    SwinGame.PlayMusic("Mountain.mp3");
+                }
+                if (_BGM2Button.IsAt(SwinGame.MousePosition()))
+                {
+                    SwinGame.StopMusic();
+                    SwinGame.LoadMusic("Netherplace.mp3");
+                    SwinGame.PlayMusic("Netherplace.mp3");
+                }
+                if (_stopBGMButton.IsAt(SwinGame.MousePosition()))
+                {
+                    SwinGame.StopMusic();
+                }
             }
         }
 
@@ -94,6 +135,15 @@ namespace MyGame
 
 			_previousImgButton.SetX(x + 25);
 			_previousImgButton.SetTextPositionX(x + 32);
+
+            _BGM1Button.SetX(x + 25);
+            _BGM1Button.SetTextPositionX(x + 30);
+
+            _BGM2Button.SetX(x + 130);
+            _BGM2Button.SetTextPositionX(x + 140);
+
+            _stopBGMButton.SetX(x + 25);
+            _stopBGMButton.SetTextPositionX(x + 35);
         }
 
         //y = 0
@@ -107,6 +157,15 @@ namespace MyGame
 
 			_previousImgButton.SetY(y + 50);
 			_previousImgButton.SetTextPositionY(y + 60);
+
+            _BGM1Button.SetY(y + 120);
+            _BGM1Button.SetTextPositionY(y + 132);
+
+            _BGM2Button.SetY(y + 120);
+            _BGM2Button.SetTextPositionY(y + 132);
+
+            _stopBGMButton.SetY(y + 180);
+            _stopBGMButton.SetTextPositionY(y + 192);
         }
     }
 }
