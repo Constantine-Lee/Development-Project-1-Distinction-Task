@@ -50,9 +50,38 @@ namespace MyGame
 
         public override void ProcessEvent()
         {
-            
+            if (SwinGame.MouseClicked(MouseButton.LeftButton))
+            {
+                if (_pokemonButton.IsAt(SwinGame.MousePosition()))
+                {
+                    //add pokemon character
+                    _viewManager.View = _viewManager.MWNewClassicGame();
+                }
+                if (_superMarioButton.IsAt(SwinGame.MousePosition()))
+                {
+                    //add mario character
+                    _viewManager.View = _viewManager.MWNewClassicGame();
+                }
+            }
         }
 
-       
+        //x = 0
+        public void SetX(int x)
+        {
+            _pokemonButton.SetX(x + 40);
+            _pokemonButton.SetTextPositionX(x + 85);
+            _superMarioButton.SetX(x + 270);
+            _superMarioButton.SetTextPositionX(x + 300);
+        }
+
+        //y = 0
+        public void SetY(int y)
+        {
+            _pokemonButton.SetY(y + 220);
+            _pokemonButton.SetTextPositionY(y + 230);
+
+            _superMarioButton.SetY(y + 220);
+            _superMarioButton.SetTextPositionY(y + 230);
+        }
     }
 }

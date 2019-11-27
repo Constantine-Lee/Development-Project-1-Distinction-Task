@@ -25,7 +25,7 @@ namespace MyGame
         private PauseScreenForEasy _pauseScreenForEasy;
         private PauseScreenForMedium _pauseScreenForMedium;
         private ZYCharacterInterface _zYcharacterSelection;
-
+        private MWCustomerSelection _mWCustomerSelection;
         public ViewManager()
         {
             SwinGame.LoadResourceBundle("bundle.txt");
@@ -47,6 +47,7 @@ namespace MyGame
             _pauseScreenForEasy = new PauseScreenForEasy(this);
             _pauseScreenForMedium = new PauseScreenForMedium(this);
             _zYcharacterSelection = new ZYCharacterInterface(this);
+            _mWCustomerSelection = new MWCustomerSelection(this);
             _easyMode.SetSpeed();
             _view = _menu;
         }
@@ -79,6 +80,7 @@ namespace MyGame
             _pauseScreenForEasy.SetX(0);
             _pauseScreenForMedium.SetX(0);
             _zYcharacterSelection.SetX(0);
+            _mWCustomerSelection.SetX(0);
         }
 
         public void SetY(int y)
@@ -100,6 +102,12 @@ namespace MyGame
             _pauseScreenForEasy.SetY(0);
             _pauseScreenForMedium.SetY(0);
             _zYcharacterSelection.SetY(0);
+            _mWCustomerSelection.SetY(0);
+        }
+        public MWCustomerSelection MWCustomerSelection
+        {
+            get { return _mWCustomerSelection; }
+            set { _mWCustomerSelection = value; }
         }
 
         public ZYCharacterInterface ZYCharacterInterface
