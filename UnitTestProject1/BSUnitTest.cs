@@ -39,5 +39,11 @@ namespace UnitTestProject1
             bool check = File.Exists("Resources/images/GainPack.png");
             Assert.IsTrue(check);
         }
+
+        [TestMethod]
+        public void EndingScreenTest() {
+            bool check = File.Exists("Resources/images/Ending_bg3_mod1.png");
+            Assert.IsTrue(check);
+        }
     }
 }
