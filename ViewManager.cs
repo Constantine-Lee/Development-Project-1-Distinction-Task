@@ -20,6 +20,7 @@ namespace MyGame
         private ZYStartDifficult _startDifficult;
         private Settings _settings;
         private MWGame _MWGame;
+        private MWmarioGame _MWmarioGame;
         private GameMode _gameMode;
         private BS_Game _BSGame;
         private PauseScreenForEasy _pauseScreenForEasy;
@@ -42,6 +43,7 @@ namespace MyGame
             _difficultMode = new ZYDifficultMode(this);
             _startDifficult = new ZYStartDifficult(this);
             _MWGame = new MWGame(this);
+            _MWmarioGame = new MWmarioGame(this);
             _gameMode = new GameMode(this);
             _BSGame = new BS_Game(this);
             _pauseScreenForEasy = new PauseScreenForEasy(this);
@@ -75,6 +77,7 @@ namespace MyGame
             _startMedium.SetX(0);
             _startDifficult.SetX(0);
             _MWGame.SetX(0);
+            _MWmarioGame.SetX(0);
             _gameMode.SetX(0);
             _BSGame.SetX(0);
             _pauseScreenForEasy.SetX(0);
@@ -97,6 +100,7 @@ namespace MyGame
             _startMedium.SetY(0);
             _startDifficult.SetY(0);
             _MWGame.SetY(0);
+            _MWmarioGame.SetY(0);
             _gameMode.SetY(0);
             _BSGame.SetY(0);
             _pauseScreenForEasy.SetY(0);
@@ -136,6 +140,13 @@ namespace MyGame
         public MWGame MWNewClassicGame()
         {
             MWGame game = new MWGame(this);
+            game.SetX(0);
+            game.SetY(0);
+            return game;
+        }
+        public MWmarioGame MWNewMarioClassicGame()
+        {
+            MWmarioGame game = new MWmarioGame(this);
             game.SetX(0);
             game.SetY(0);
             return game;

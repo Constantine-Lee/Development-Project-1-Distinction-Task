@@ -68,7 +68,6 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-
         public void TestNewMarioCharacterGame()
         {
             MWmarioGame MWmarioGame = new MWmarioGame();

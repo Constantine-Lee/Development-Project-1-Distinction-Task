@@ -236,6 +236,7 @@
     <Compile Include="MW\Game\Bottom Bar\MWSampleFood.cs" />
     <Compile Include="MW\Game\MWCustomerSelection.cs" />
     <Compile Include="MW\Game\MWGame.cs" />
+    <Compile Include="MW\Game\MWmarioGame.cs" />
     <Compile Include="MW\Game\Serving Area\Customer\MWCustomer.cs" />
     <Compile Include="MW\Game\Serving Area\Customer\MWMarioCustomer.cs" />
     <Compile Include="MW\Game\Serving Area\Customer\MWMarioCustomerGenerator.cs" />
