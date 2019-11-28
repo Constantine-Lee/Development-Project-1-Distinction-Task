@@ -70,8 +70,8 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestNewMarioCharacterGame()
         {
-            MWmarioGame MWmarioGame = new MWmarioGame();
-            Assert.IsNotNull(MWmarioGame);
+            bool check1 = File.Exists("MW/Game/MWmarioGame.cs");
+            Assert.IsTrue(check1);
         }
     }
 }
