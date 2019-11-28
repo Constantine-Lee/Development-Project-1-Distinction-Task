@@ -15,24 +15,12 @@ namespace MyGame
 
 		public static void nextImg() 
 		{
-            if (img < 8)
-            {
-                img = img + 1;
-            }
-            else {
-                img = 7;
-            }
+            img++;
 		}
 
 		public static void previousImg()
 		{
-            if (img > 0)
-            {
-                img = img - 1;
-            }
-            else {
-                img = 0;
-            }
+            img--;
 		}
 
 		public static int Img 

@@ -87,8 +87,9 @@ namespace MyGame
                 }
 				if (_nextImgButton.IsAt(SwinGame.MousePosition())) 
 				{
-					BS_bgSelector.nextImg ();
-					if (BS_bgSelector.Img < 7) {
+					
+					if (BS_bgSelector.Img < 6) {
+                        BS_bgSelector.nextImg ();
 						SwinGame.ReleaseBitmap (_image);
 						_image = BS_bgSelector.bg_img ();
 						SwinGame.LoadBitmapNamed (_image, _image);
@@ -97,8 +98,9 @@ namespace MyGame
 				}
 				if (_previousImgButton.IsAt(SwinGame.MousePosition()))
 				{
-					BS_bgSelector.previousImg ();
-					if (BS_bgSelector.Img > 1) {
+					
+					if (BS_bgSelector.Img > 0) {
+                        BS_bgSelector.previousImg ();
 						SwinGame.ReleaseBitmap (_image);
 						_image = BS_bgSelector.bg_img ();
 						SwinGame.LoadBitmapNamed (_image, _image);

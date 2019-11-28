@@ -28,10 +28,5 @@ namespace MyGame
 		{
             return _backgroundImage[img];
 		}
-
-		public static int numOfImgs() 
-		{
-			return _backgroundImage.Count;
-		}
 	}
 }
