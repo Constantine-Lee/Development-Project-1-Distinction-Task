@@ -6,14 +6,16 @@ namespace MyGame
 {
     public class MWmarioGame : View
     {
+        /*
         private MWMarioServingArea _marioservingArea;
         private MWSideBarMarioUpdate _mariosideBar;
         private MWBottomBar _mariobtmBar;
         private MWButton _mariogiveUpButton;
-
+        */
         public MWmarioGame(ViewManager viewManager)
             : base(viewManager)
         {
+            /*
             _mariosideBar = new MWSideBarMarioUpdate(_viewManager);
             _marioservingArea = new MWMarioServingArea();
             _mariobtmBar = new MWBottomBar();
@@ -31,8 +33,10 @@ namespace MyGame
             _mariobtmBar.RegisterStove(_marioservingArea.Stoves);
             _marioservingArea.Player.RegisterHoldingFrame(_mariosideBar.HoldingFoodFrame);
             //
+            */
         }
 
+        /*
         public override void Draw()
         {
             _marioservingArea.Draw();
@@ -84,6 +88,6 @@ namespace MyGame
             _mariogiveUpButton.SetY(y + 295);
             _mariogiveUpButton.SetTextPositionY(y + 310);
         }
-
+        */
     }
 }

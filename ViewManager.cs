@@ -77,7 +77,7 @@ namespace MyGame
             _startMedium.SetX(0);
             _startDifficult.SetX(0);
             _MWGame.SetX(0);
-            _MWmarioGame.SetX(0);
+            /*_MWmarioGame.SetX(0);*/
             _gameMode.SetX(0);
             _BSGame.SetX(0);
             _pauseScreenForEasy.SetX(0);
@@ -100,7 +100,7 @@ namespace MyGame
             _startMedium.SetY(0);
             _startDifficult.SetY(0);
             _MWGame.SetY(0);
-            _MWmarioGame.SetY(0);
+            /*_MWmarioGame.SetY(0);*/
             _gameMode.SetY(0);
             _BSGame.SetY(0);
             _pauseScreenForEasy.SetY(0);
@@ -144,13 +144,13 @@ namespace MyGame
             game.SetY(0);
             return game;
         }
-        public MWmarioGame MWNewMarioClassicGame()
+        /*public MWmarioGame MWNewMarioClassicGame()
         {
             MWmarioGame game = new MWmarioGame(this);
             game.SetX(0);
             game.SetY(0);
             return game;
-        }
+        }*/
 
         public BS_Game BSNewCasualGame()
         {
