@@ -157,6 +157,7 @@ namespace MyGame
 						_player.SetFood ("RedCandy.png");
 					}
 					tableOfStove.SetFood ("");
+                    Audio.PlaySoundEffect("candyPickUp");
 				}
 			}
 
@@ -168,6 +169,7 @@ namespace MyGame
 						diningTable.Waiting = false;
 						diningTable.Customer.WishName = "";
 						_player.SetFood ("");
+                        Audio.PlaySoundEffect("sell");
 					}
 				}
 			}
@@ -195,7 +197,10 @@ namespace MyGame
 
 			//throw away holding food if collide with dustbin. 
 			if (SwinGame.SpriteCollision (_player.PlayerSprite, _dustbin)) {
-				_player.SetFood ("");
+                if (_player.HoldingFoodName != "") { 
+                    Audio.PlaySoundEffect("trash",(float)0.1);
+                }
+				_player.SetFood ("");   
 			}
 	}
 	}}

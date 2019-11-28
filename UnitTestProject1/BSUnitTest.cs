@@ -17,12 +17,6 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void LowHPSoundFilePresenceTest() {
-            bool check = File.Exists("Resources/sounds/low_hp.wav");
-            Assert.IsTrue(check);
-        }
-
-        [TestMethod]
         public void SellItemSoundEffectTest() {
             bool check = File.Exists("Resources/sounds/sell_buy_item.wav");
             Assert.IsTrue(check);
