@@ -6,6 +6,7 @@ namespace MyGame
 {
     public class MWmarioGame : View
     {
+        /*
         private MWMarioServingArea _marioservingArea;
         private MWSideBarMarioUpdate _mariosideBar;
         private MWBottomBar _mariobtmBar;
@@ -84,6 +85,6 @@ namespace MyGame
             _mariogiveUpButton.SetY(y + 295);
             _mariogiveUpButton.SetTextPositionY(y + 310);
         }
-
+*/
     }
 }
