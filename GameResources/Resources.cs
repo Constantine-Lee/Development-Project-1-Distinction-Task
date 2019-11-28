@@ -22,11 +22,14 @@ namespace MyGame
             Audio.LoadSoundEffectNamed("candyPickUp","ring_inventory.wav");
             Audio.LoadSoundEffectNamed("sell","sell_buy_item.wav");
             Audio.LoadSoundEffectNamed("trash","cloth-inventory.wav");
+            Images.LoadBitmapNamed("Ending1","Ending_bg3_mod1.png");
+            
 		}
 
 		public static string imgOut(int img) 
 		{
             return _backgroundImage[img];
 		}
+
 	}
 }

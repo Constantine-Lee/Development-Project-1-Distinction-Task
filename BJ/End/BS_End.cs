@@ -12,9 +12,9 @@ namespace MyGame
 		public BS_End (ViewManager viewManager): base(viewManager)
 		{
 			//background Image
-			_image = "game_over.jpg";
-			SwinGame.LoadBitmapNamed (_image, _image);
-			_menu = SwinGame.CreateSprite (SwinGame.BitmapNamed (_image));
+			
+			SwinGame.LoadBitmapNamed ("Ending1", "Ending1");
+			_menu = SwinGame.CreateSprite (SwinGame.BitmapNamed ("Ending1"));
 			//
 
 			//Go to menu

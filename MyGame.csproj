@@ -111,6 +111,9 @@
     <Content Include="Resources\images\doom.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\Ending_bg3_mod1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\female.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
