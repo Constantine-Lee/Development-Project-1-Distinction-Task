@@ -66,5 +66,13 @@ namespace UnitTestProject1
             Assert.IsTrue(check5);
             Assert.IsTrue(check6);
         }
+
+        [TestMethod]
+
+        public void TestNewMarioCharacterGame()
+        {
+            MWmarioGame MWmarioGame = new MWmarioGame();
+            Assert.IsNotNull(MWmarioGame);
+        }
     }
 }
