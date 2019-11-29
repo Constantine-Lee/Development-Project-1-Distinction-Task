@@ -18,7 +18,7 @@ namespace MyGame
         public Settings(ViewManager viewManager)
             : base(viewManager)
         {
-			//background Image
+            //background Image
 			_image = BS_bgSelector.bg_img();
             SwinGame.LoadBitmapNamed(_image, _image);
             _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed(_image));
@@ -65,6 +65,7 @@ namespace MyGame
         public override void Draw()
         {
            SwinGame.DrawSprite(_menu);
+           SwinGame.DrawRectangle(SwinGame.RGBAColor(133,16,216,100),true, 20, 50, 150, 300);
 			_gotoMenuButton.Draw();
 			_nextImgButton.Draw();
 			_previousImgButton.Draw();
@@ -141,8 +142,8 @@ namespace MyGame
             _BGM1Button.SetX(x + 25);
             _BGM1Button.SetTextPositionX(x + 30);
 
-            _BGM2Button.SetX(x + 130);
-            _BGM2Button.SetTextPositionX(x + 140);
+            _BGM2Button.SetX(x + 25);
+            _BGM2Button.SetTextPositionX(x + 35);
 
             _stopBGMButton.SetX(x + 25);
             _stopBGMButton.SetTextPositionX(x + 35);
@@ -154,20 +155,20 @@ namespace MyGame
             _gotoMenuButton.SetY(y + 340);
             _gotoMenuButton.SetTextPositionY(y + 350);
 
-			_nextImgButton.SetY(y + 50);
-			_nextImgButton.SetTextPositionY(y + 60);
+			_nextImgButton.SetY(y + 75);
+			_nextImgButton.SetTextPositionY(y + 85);
 
-			_previousImgButton.SetY(y + 50);
-			_previousImgButton.SetTextPositionY(y + 60);
+			_previousImgButton.SetY(y + 75);
+			_previousImgButton.SetTextPositionY(y + 85);
 
-            _BGM1Button.SetY(y + 120);
-            _BGM1Button.SetTextPositionY(y + 132);
+            _BGM1Button.SetY(y + 200);
+            _BGM1Button.SetTextPositionY(y + 212);
 
-            _BGM2Button.SetY(y + 120);
-            _BGM2Button.SetTextPositionY(y + 132);
+            _BGM2Button.SetY(y + 250);
+            _BGM2Button.SetTextPositionY(y + 262);
 
-            _stopBGMButton.SetY(y + 180);
-            _stopBGMButton.SetTextPositionY(y + 192);
+            _stopBGMButton.SetY(y + 300);
+            _stopBGMButton.SetTextPositionY(y + 312);
         }
     }
 }

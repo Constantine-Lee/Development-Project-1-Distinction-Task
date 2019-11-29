@@ -141,6 +141,9 @@
     <Content Include="Resources\images\purpleStorm.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\red_button2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\startmedium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
