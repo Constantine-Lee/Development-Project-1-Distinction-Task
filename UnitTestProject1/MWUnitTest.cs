@@ -73,5 +73,15 @@ namespace UnitTestProject1
             bool check1 = File.Exists("MW/Game/MWmarioGame.cs");
             Assert.IsTrue(check1);
         }
+
+        [TestMethod]
+        public void TestMarioDiningTable()
+        {
+            MWMarioDiningTable mWMarioDiningTable = new MWMarioDiningTable();
+            MWMarioWoodenTable mWMarioWoodenTable = new MWMarioWoodenTable();
+            
+            Assert.IsNotNull(mWMarioDiningTable);
+            Assert.IsNotNull(mWMarioWoodenTable);
+        }
     }
 }
