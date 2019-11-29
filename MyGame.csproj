@@ -252,6 +252,9 @@
     <Compile Include="MW\Game\Serving Area\Customer\MWWishGenerator.cs" />
     <Compile Include="MW\Game\Serving Area\Dining Table\MWDiningTable.cs" />
     <Compile Include="MW\Game\Serving Area\Dining Table\MWDiningTableManager.cs" />
+    <Compile Include="MW\Game\Serving Area\Dining Table\MWMarioDiningTable.cs" />
+    <Compile Include="MW\Game\Serving Area\Dining Table\MWMarioDiningTableManager.cs" />
+    <Compile Include="MW\Game\Serving Area\Dining Table\MWMarioWoodenTable.cs" />
     <Compile Include="MW\Game\Serving Area\Dining Table\MWWoodenTable.cs" />
     <Compile Include="MW\Game\Serving Area\MWServingArea.cs" />
     <Compile Include="MW\Game\Serving Area\MWStatusBar.cs" />

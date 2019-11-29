@@ -5,13 +5,13 @@ namespace MyGame
 {
     public class MWMarioDiningTableManager
     {
-        private MWMarioDiningTable[] _mariodiningTable;
+        /*private MWMarioDiningTable[] _mariodiningTable;*/
 
         public MWMarioDiningTableManager(MWMarioDiningTable[] diningTable)
         {
-            _mariodiningTable = diningTable;
+            /*_mariodiningTable = diningTable;*/
         }
-
+        /*
         // x = 5
         public void SetX(int x)
         {
@@ -44,6 +44,6 @@ namespace MyGame
             {
                 diningTable.ProcessEvent();
             }
-        }
+        }*/
     }
 }
