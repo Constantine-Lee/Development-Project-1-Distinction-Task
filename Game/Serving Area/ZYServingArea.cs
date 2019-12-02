@@ -220,7 +220,7 @@ namespace MyGame
 
 			//check collision between energy ball and player. Refill energy if collision happen.
 			if (SwinGame.SpriteCollision (_energyPotion.EnergyPotionSprite, _player.PlayerSprite) && (_energyPotion.EnergyImage == "ball.png")) {
-				_player.Movement.Ticks += 30;
+                _player.SetFillingImage("lighting.png");
 				_energyPotion.ResetEnergyBall ();
 				SwinGame.StartTimer (_gameTime);
                 SwinGame.LoadSoundEffect("chargeEnergy.wav");

@@ -55,6 +55,11 @@ namespace MyGame
             set { _movement = value; }
         }
 
+        public void SetFillingImage(String image)
+        {
+            _movement.SetFillingImage(image);
+        }
+
         public void Draw()
         {
             SwinGame.DrawSprite(_player);

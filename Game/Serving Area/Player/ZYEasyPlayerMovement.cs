@@ -9,7 +9,7 @@ namespace MyGame
         private ZYStatusBar _statusBar;
         private Timer _gameTime;
         private int _ticks;
-
+        private ZYPlayerWish zYPlayerWish;
         public ZYEasyPlayerMovement()
         {
             _speed = 1;
@@ -20,16 +20,21 @@ namespace MyGame
 
             _statusBar = new ZYStatusBar("hb_01c.png");
             _statusBar.SetFillingImage("hb_01b.png");
+
+            zYPlayerWish = new ZYPlayerWish("");
+            zYPlayerWish.SetFillingImage("normalEmoji.png");
         }
 
         public void SetX(int x)
         {
             _statusBar.SetX(x + 22);
+            zYPlayerWish.SetX(x + 22);
         }
 
         public void SetY(int y)
         {
             _statusBar.SetY(y + 25);
+            zYPlayerWish.SetY(y + 25);
         }
 
         public int Ticks
@@ -38,13 +43,21 @@ namespace MyGame
             set { _ticks = value; }
         }
 
+        public void SetFillingImage(String image)
+        {
+            zYPlayerWish.SetFillingImage(image);
+        }
+
         public void Draw(float x, float y)
         {
-            _statusBar.Draw(_ticks, x, y);
+           // _statusBar.Draw(_ticks, x, y);
+            zYPlayerWish.Draw(100, x+20, y-20);
         }
 
         public void ProcessEvent(Sprite _player)
         {
+            zYPlayerWish.ProcessEvent();
+
             if (SwinGame.TimerTicks(_gameTime) > 150)
             {
                 if (_ticks < 50)
@@ -54,9 +67,13 @@ namespace MyGame
                 SwinGame.ResetTimer(_gameTime);
             }
 
-            if (_ticks < 25)
+            if (zYPlayerWish.Image == "tired.png")
             {
                 _speed = 0.8;
+            }
+            else if (zYPlayerWish.Image == "lighting.png")
+            {
+                _speed = 2.0;
             }
             else _speed = 1.3;
 
