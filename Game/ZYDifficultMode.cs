@@ -74,6 +74,11 @@ namespace MyGame
                     _viewManager.View = _viewManager.ZYEnd;
                 }
             }
+
+            if (ZYSideBar.winStar == 4)
+            {
+                _viewManager.View = _viewManager.ZYEnd;
+            }
         }
 
         // x = 0

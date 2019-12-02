@@ -181,6 +181,7 @@ namespace MyGame
                         diningTable.Waiting = false;
                         diningTable.Customer.WishName = "";
                         _player.SetFood("");
+                        ZYSideBar.winStar++;
                     }
                 }
             }

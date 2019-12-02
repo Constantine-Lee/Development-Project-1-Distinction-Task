@@ -156,6 +156,9 @@
     <Content Include="Resources\images\red_button2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\startmedium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -163,6 +166,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\images\Tutorial-game-interface-001.jpg" />
+    <Content Include="Resources\images\yellowStar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\sounds\chargeEnergy.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -75,9 +75,9 @@ namespace MyGame
             _servingArea.ProcessEvent();
             _sideBar.ProcessEvent();
 
-            if (SwinGame.TimerTicks(_gameTime) > 500)
+            if (SwinGame.TimerTicks(_gameTime) > 1)
             {
-                _ticks = _ticks + 1;
+                _ticks = _ticks + 100;
                 SwinGame.ResetTimer(_gameTime);
             }
 

@@ -8,6 +8,7 @@ namespace MyGame
 		private string _image;
 		private ZYButton _gotoMenuButton;
 		private Sprite _menu;
+        public Boolean winOrLose;
 
 		public ZYEnd (ViewManager viewManager): base(viewManager)
 		{
@@ -27,8 +28,7 @@ namespace MyGame
 		public override void Draw ()
 		{
 			SwinGame.DrawSprite (_menu);
-			SwinGame.DrawText ("Game Over!", Color.Black, "Arial", 35, 280, 50);
-			SwinGame.DrawText ("Score :" + ZYSideBar.Ticks, Color.Black, "Arial", 35, 280, 90);
+
 			_gotoMenuButton.Draw ();
 		}
 
