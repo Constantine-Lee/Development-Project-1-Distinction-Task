@@ -28,6 +28,7 @@ namespace MyGame
 			_nextImgButton = new BS_Button("flatDark24_2.png");
 			_nextImgButton.SetWidth(30);
 			_nextImgButton.SetHeight(30);
+            _nextImgButton.SetText(" Background Changer ",15);
 
 			//previous img button
 			_previousImgButton = new BS_Button("flatDark23_2.png");
@@ -134,7 +135,7 @@ namespace MyGame
             _gotoMenuButton.SetTextPositionX(x + 312);
 
 			_nextImgButton.SetX(x + 75);
-			_nextImgButton.SetTextPositionX(x + 82);
+			_nextImgButton.SetTextPositionX(x + 20);
 
 			_previousImgButton.SetX(x + 25);
 			_previousImgButton.SetTextPositionX(x + 32);
@@ -156,7 +157,7 @@ namespace MyGame
             _gotoMenuButton.SetTextPositionY(y + 350);
 
 			_nextImgButton.SetY(y + 75);
-			_nextImgButton.SetTextPositionY(y + 85);
+			_nextImgButton.SetTextPositionY(y + 110);
 
 			_previousImgButton.SetY(y + 75);
 			_previousImgButton.SetTextPositionY(y + 85);
