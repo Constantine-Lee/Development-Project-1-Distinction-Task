@@ -91,5 +91,13 @@ namespace UnitTestProject1
            
             Assert.IsNotNull(mWSideBarMarioUpdate);
         }
+
+        [TestMethod]
+        public void TestMarioServingArea()
+        {
+            MWMarioServingArea mWMarioServingArea = new MWMarioServingArea();
+
+            Assert.IsNotNull(mWMarioServingArea);
+        }
     }
 }

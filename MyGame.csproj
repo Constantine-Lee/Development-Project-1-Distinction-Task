@@ -280,6 +280,7 @@
     <Compile Include="Menu\Menu.cs" />
     <Compile Include="Menu\ZYButton.cs" />
     <Compile Include="MW\End\MWEnd.cs" />
+    <Compile Include="MW\End\MWMarioEnd.cs" />
     <Compile Include="MW\Game\Bottom Bar\MWBottomBar.cs" />
     <Compile Include="MW\Game\Bottom Bar\MWSampleFood.cs" />
     <Compile Include="MW\Game\MWCustomerSelection.cs" />
@@ -298,6 +299,7 @@
     <Compile Include="MW\Game\Serving Area\Dining Table\MWMarioDiningTableManager.cs" />
     <Compile Include="MW\Game\Serving Area\Dining Table\MWMarioWoodenTable.cs" />
     <Compile Include="MW\Game\Serving Area\Dining Table\MWWoodenTable.cs" />
+    <Compile Include="MW\Game\Serving Area\MWMarioServingArea.cs" />
     <Compile Include="MW\Game\Serving Area\MWServingArea.cs" />
     <Compile Include="MW\Game\Serving Area\MWStatusBar.cs" />
     <Compile Include="MW\Game\Serving Area\Player\MWEnergyBall.cs" />
@@ -308,6 +310,7 @@
     <Compile Include="MW\Game\Serving Area\Stove\TableOfStove.cs" />
     <Compile Include="MW\Game\Side Bar\MWGameLife.cs" />
     <Compile Include="MW\Game\Side Bar\MWHoldingFoodFrame.cs" />
+    <Compile Include="MW\Game\Side Bar\MWSideBarMarioUpdate.cs" />
     <Compile Include="MW\Game\Side Bar\MWSideBarUpdate.cs" />
     <Compile Include="MW\Menu\GameMode.cs" />
     <Compile Include="MW\Menu\MWButton.cs" />

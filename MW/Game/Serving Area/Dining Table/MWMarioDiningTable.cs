@@ -5,7 +5,7 @@ namespace MyGame
 {
     public class MWMarioDiningTable
     {
-        /*private Sprite _mariodiningTable;
+        private Sprite _mariodiningTable;
         private Sprite _mariofood;
 
         private MWStatusBar _mariostatusBar;
@@ -22,7 +22,7 @@ namespace MyGame
 
         public MWMarioDiningTable()
         {
-            /*//Dining Table
+            //Dining Table
             SwinGame.LoadBitmapNamed("diningTable.png", "diningTable.png");
             _mariodiningTable = SwinGame.CreateSprite(SwinGame.BitmapNamed("diningTable.png"));
             //
@@ -43,13 +43,13 @@ namespace MyGame
             //initiate a new red status bar
             _mariostatusBar = new MWStatusBar("emptyThick.png");
             _mariostatusBar.SetFillingImage("redThick.png");
-            //*/
+            //
         }
 
 
         // x1 = 5, x2 = 90, x3 = 175, x4 = 260
         
-        /*
+        
         public void SetX(int x)
         {
             SwinGame.SpriteSetX(_mariodiningTable, x);
@@ -165,6 +165,6 @@ namespace MyGame
                     _mariowaiting = true;
                 }
             }
-        }*/
+        }
     }
 }
