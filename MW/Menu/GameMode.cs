@@ -62,7 +62,7 @@ namespace MyGame
             {
                 if (_classicButton.IsAt(SwinGame.MousePosition()))
                 {
-                    _viewManager.View = _viewManager.MWNewClassicGame();
+                    _viewManager.View = _viewManager.MWCustomerSelection;
                 }
                 if (_survivalButton.IsAt(SwinGame.MousePosition()))
                 {

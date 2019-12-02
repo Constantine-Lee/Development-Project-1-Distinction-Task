@@ -55,7 +55,7 @@ namespace MyGame
                 if (_pokemonButton.IsAt(SwinGame.MousePosition()))
                 {
                     //add pokemon character
-                    _viewManager.View = _viewManager.MWNewClassicGame();
+                    _viewManager.View = _viewManager.MWNewMarioClassicGame();
                 }
                 if (_superMarioButton.IsAt(SwinGame.MousePosition()))
                 {
