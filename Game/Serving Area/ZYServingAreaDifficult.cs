@@ -7,7 +7,7 @@ namespace MyGame
     public class ZYServingAreaDifficult
     {
         private Timer _gameTime;
-
+        private Timer _soundTime;
         private ZYEnergyBall _energyPotion;
 
         private Sprite _sky;
@@ -29,13 +29,13 @@ namespace MyGame
         public ZYServingAreaDifficult()
         {
             _gameTime = SwinGame.CreateTimer();
-
+            _soundTime = SwinGame.CreateTimer();
             // Random the first energy potion
             _energyPotion = new ZYEnergyBall();
             _energyPotion.SetX(_random.Next(10, 340));
             _energyPotion.SetY(_random.Next(115, 190));
             //
-
+            SwinGame.StartTimer(_soundTime);
             // STOVE
             //2 table of stove
             _tableOfStoves = new ZYTableOfStove[2];
@@ -177,11 +177,29 @@ namespace MyGame
                 {
                     if (("small_" + _player.HoldingFoodName) == diningTable.Customer.WishName)
                     {
+                        SwinGame.LoadSoundEffect("success.wav");
+                        SwinGame.PlaySoundEffect("success.wav");
                         diningTable.SetFood(diningTable.Customer.WishName);
                         diningTable.Waiting = false;
                         diningTable.Customer.WishName = "";
                         _player.SetFood("");
                         ZYSideBar.winStar++;
+                    }
+                    else
+                    {
+                        if (_player.HoldingFoodName == "")
+                        {
+
+                        }
+                        else
+                        {
+                            if ((SwinGame.TimerTicks(_soundTime) / 1000) > 3)
+                            {
+                                SwinGame.LoadSoundEffect("wrong.wav");
+                                SwinGame.PlaySoundEffect("wrong.wav");
+                                SwinGame.ResetTimer(_soundTime);
+                            }
+                        }
                     }
                 }
             }
@@ -192,6 +210,8 @@ namespace MyGame
                 _player.Movement.Ticks += 30;
                 _energyPotion.ResetEnergyBall();
                 SwinGame.StartTimer(_gameTime);
+                SwinGame.LoadSoundEffect("chargeEnergy.wav");
+                SwinGame.PlaySoundEffect("chargeEnergy.wav");
             }
 
             //If no energy ball exist then generate new energy ball after 5 second 
@@ -200,11 +220,17 @@ namespace MyGame
                 _energyPotion.NewEnergyBall();
                 _energyPotion.ResetEnergyBallPosition();
                 SwinGame.StopTimer(_gameTime);
+
             }
 
             //throw away holding food if collide with dustbin. 
             if (SwinGame.SpriteCollision(_player.PlayerSprite, _dustbin))
             {
+                if (_player.HoldingFoodName != "")
+                {
+                    SwinGame.LoadSoundEffect("drop.wav");
+                    SwinGame.PlaySoundEffect("drop.wav");
+                }
                 _player.SetFood("");
             }
         }

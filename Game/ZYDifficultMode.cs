@@ -78,6 +78,8 @@ namespace MyGame
             if (ZYSideBar.winStar == 4)
             {
                 ZYEnd.winOrLose = true;
+                SwinGame.LoadSoundEffect("victory.wav");
+                SwinGame.PlaySoundEffect("victory.wav");
                 _viewManager.View = _viewManager.ZYEnd;
             }
         }

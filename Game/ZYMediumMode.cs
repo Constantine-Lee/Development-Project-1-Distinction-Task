@@ -74,7 +74,7 @@ namespace MyGame
             _servingArea.ProcessEvent();
             _sideBar.ProcessEvent();
 
-            if (SwinGame.TimerTicks(_gameTime) > 1)
+            if (SwinGame.TimerTicks(_gameTime) > 5)
             {
                 _ticks = _ticks + 100;
                 SwinGame.ResetTimer(_gameTime);
@@ -85,12 +85,15 @@ namespace MyGame
             {
                 if (_giveUpButton.IsAt(SwinGame.MousePosition()))
                 {
+
                     _viewManager.View = _viewManager.PauseScreenForMedium;
                 }
             }
 
             if (_ticks > 125)
             {
+                SwinGame.LoadSoundEffect("victory.wav");
+                SwinGame.PlaySoundEffect("victory.wav");
                 _viewManager.View = _viewManager.StartDifficult;
             }
         }
@@ -114,8 +117,6 @@ namespace MyGame
             _btmBar.SetY(y + 280);
             _giveUpButton.SetY(y + 295);
             _giveUpButton.SetTextPositionY(y + 315);
-
-
             _statusBar.SetY(y + 30);
         }
 

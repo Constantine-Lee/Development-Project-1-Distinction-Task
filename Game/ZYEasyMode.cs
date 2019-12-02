@@ -92,6 +92,8 @@ namespace MyGame
 
             if (_ticks > 125)
             {
+                SwinGame.LoadSoundEffect("victory.wav");
+                SwinGame.PlaySoundEffect("victory.wav");
                 _viewManager.View = _viewManager.StartMedium;
             }
         }

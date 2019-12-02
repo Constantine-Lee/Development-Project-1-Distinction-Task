@@ -33,6 +33,7 @@ namespace MyGame
 		{
             if (winOrLose)
             {
+                
                 SwinGame.DrawSprite(winEnding);
             }
             else

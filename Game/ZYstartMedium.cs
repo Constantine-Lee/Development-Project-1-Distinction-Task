@@ -27,6 +27,7 @@ namespace MyGame
 
         public override void Draw()
         {
+           
             SwinGame.DrawSprite(_menu);
             _gotoMenuButton.Draw();
         }
@@ -40,8 +41,7 @@ namespace MyGame
             if (SwinGame.MouseClicked(MouseButton.LeftButton))
             {
                 if (_gotoMenuButton.IsAt(SwinGame.MousePosition()))
-                {
-
+                {                    
                     _viewManager.View = _viewManager.NewMediumMode();
                 }
             }
