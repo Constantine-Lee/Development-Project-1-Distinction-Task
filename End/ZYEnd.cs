@@ -8,14 +8,19 @@ namespace MyGame
 		private string _image;
 		private ZYButton _gotoMenuButton;
 		private Sprite _menu;
+        private Sprite winEnding;
+        public static Boolean  winOrLose;
 
 		public ZYEnd (ViewManager viewManager): base(viewManager)
 		{
+            winOrLose = false;
 			//background Image
-            SwinGame.LoadBitmapNamed("Ending1", "Ending1");
-            _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed("Ending1"));
-			//
+            SwinGame.LoadBitmapNamed("loseBackground", "loseBackground.jpg");
+            _menu = SwinGame.CreateSprite(SwinGame.BitmapNamed("loseBackground"));
+            //
 
+            SwinGame.LoadBitmapNamed("winEnding.jpg", "winEnding.jpg");
+            winEnding = SwinGame.CreateSprite(SwinGame.BitmapNamed("winEnding.jpg"));
 			//Go to menu
 			_gotoMenuButton = new ZYButton ("grey_button06.png");
 			_gotoMenuButton.SetWidth (191);
@@ -26,9 +31,16 @@ namespace MyGame
 
 		public override void Draw ()
 		{
-			SwinGame.DrawSprite (_menu);
-			SwinGame.DrawText ("Game Over!", Color.Black, "Arial", 35, 280, 50);
-			SwinGame.DrawText ("Score :" + ZYSideBar.Ticks, Color.Black, "Arial", 35, 280, 90);
+            if (winOrLose)
+            {
+                
+                SwinGame.DrawSprite(winEnding);
+            }
+            else
+            {
+                SwinGame.DrawSprite(_menu);
+            }
+
 			_gotoMenuButton.Draw ();
 		}
 

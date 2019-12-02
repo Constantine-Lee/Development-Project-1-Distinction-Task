@@ -74,6 +74,14 @@ namespace MyGame
                     _viewManager.View = _viewManager.ZYEnd;
                 }
             }
+
+            if (ZYSideBar.winStar == 4)
+            {
+                ZYEnd.winOrLose = true;
+                SwinGame.LoadSoundEffect("victory.wav");
+                SwinGame.PlaySoundEffect("victory.wav");
+                _viewManager.View = _viewManager.ZYEnd;
+            }
         }
 
         // x = 0

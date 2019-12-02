@@ -102,7 +102,13 @@ namespace MyGame
 			set {_diningTable = value;}
 		}
 
-		public void SetFood (string foodImage)
+        public int Ticks
+        {
+            get { return _ticks; }
+            set { _ticks = value; }
+        }
+
+        public void SetFood (string foodImage)
 		{
 			SwinGame.LoadBitmapNamed (foodImage, foodImage);
 			_food = SwinGame.CreateSprite (SwinGame.BitmapNamed (foodImage));

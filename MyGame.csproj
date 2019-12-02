@@ -135,7 +135,22 @@
     <Content Include="Resources\images\hell.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\lighting.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\images\lighting.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\images\loseBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\images\normalEmoji.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\pauseBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\images\pauseButton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\images\purpleStorm.jpg">
@@ -144,12 +159,30 @@
     <Content Include="Resources\images\red_button2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\startmedium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\tired.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\Tutorial-game-interface-001.jpg" />
+    <Content Include="Resources\images\winEnding.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\images\yellowStar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sounds\chargeEnergy.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\sounds\cloth-inventory.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sounds\drop.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\sounds\Fantasy.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -169,8 +202,17 @@
     <Content Include="Resources\sounds\sell_buy_item.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\sounds\success.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sounds\victory.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\sounds\walking.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sounds\wrong.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -214,9 +256,12 @@
     <Compile Include="Game\Serving Area\DiningTable\ZYDiningTable.cs" />
     <Compile Include="Game\Serving Area\DiningTable\ZYDiningTableManager.cs" />
     <Compile Include="Game\Serving Area\DiningTable\ZYWoodenTable.cs" />
+    <Compile Include="Game\Serving Area\Player\ZYEasyPlayer.cs" />
+    <Compile Include="Game\Serving Area\Player\ZYEasyPlayerMovement.cs" />
     <Compile Include="Game\Serving Area\Player\ZYEnergyBall.cs" />
     <Compile Include="Game\Serving Area\Player\ZYMovement.cs" />
     <Compile Include="Game\Serving Area\Player\ZYPlayer.cs" />
+    <Compile Include="Game\Serving Area\Player\ZYPlayerWish.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYStove.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYStoveManager.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYTableOfStove.cs" />
@@ -238,6 +283,7 @@
     <Compile Include="Menu\Menu.cs" />
     <Compile Include="Menu\ZYButton.cs" />
     <Compile Include="MW\End\MWEnd.cs" />
+    <Compile Include="MW\End\MWMarioEnd.cs" />
     <Compile Include="MW\Game\Bottom Bar\MWBottomBar.cs" />
     <Compile Include="MW\Game\Bottom Bar\MWSampleFood.cs" />
     <Compile Include="MW\Game\MWCustomerSelection.cs" />
@@ -252,7 +298,11 @@
     <Compile Include="MW\Game\Serving Area\Customer\MWWishGenerator.cs" />
     <Compile Include="MW\Game\Serving Area\Dining Table\MWDiningTable.cs" />
     <Compile Include="MW\Game\Serving Area\Dining Table\MWDiningTableManager.cs" />
+    <Compile Include="MW\Game\Serving Area\Dining Table\MWMarioDiningTable.cs" />
+    <Compile Include="MW\Game\Serving Area\Dining Table\MWMarioDiningTableManager.cs" />
+    <Compile Include="MW\Game\Serving Area\Dining Table\MWMarioWoodenTable.cs" />
     <Compile Include="MW\Game\Serving Area\Dining Table\MWWoodenTable.cs" />
+    <Compile Include="MW\Game\Serving Area\MWMarioServingArea.cs" />
     <Compile Include="MW\Game\Serving Area\MWServingArea.cs" />
     <Compile Include="MW\Game\Serving Area\MWStatusBar.cs" />
     <Compile Include="MW\Game\Serving Area\Player\MWEnergyBall.cs" />
@@ -263,6 +313,7 @@
     <Compile Include="MW\Game\Serving Area\Stove\TableOfStove.cs" />
     <Compile Include="MW\Game\Side Bar\MWGameLife.cs" />
     <Compile Include="MW\Game\Side Bar\MWHoldingFoodFrame.cs" />
+    <Compile Include="MW\Game\Side Bar\MWSideBarMarioUpdate.cs" />
     <Compile Include="MW\Game\Side Bar\MWSideBarUpdate.cs" />
     <Compile Include="MW\Menu\GameMode.cs" />
     <Compile Include="MW\Menu\MWButton.cs" />

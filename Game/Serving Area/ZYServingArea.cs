@@ -7,14 +7,16 @@ namespace MyGame
 	public class ZYServingArea
 	{
 		private Timer _gameTime;
-
+        private Timer _soundTime;
 		private ZYEnergyBall _energyPotion;
+        private Boolean[] hits = new Boolean[4];
+        private Boolean[] notCorrects = new Boolean[4];        
 
 		private Sprite _sky;
 		private Sprite _floor;
 		private Sprite _dustbin;
 
-		private ZYPlayer _player;
+		private ZYEasyPlayer _player;
 
 		private ZYTableOfStove [] _tableOfStoves;
 		private ZYDiningTable [] _diningTables;
@@ -29,13 +31,14 @@ namespace MyGame
 		public ZYServingArea ()
 		{
 			_gameTime = SwinGame.CreateTimer ();
-
+            _soundTime = SwinGame.CreateTimer();
 			// Random the first energy potion
 			_energyPotion = new ZYEnergyBall ();
 			_energyPotion.SetX (_random.Next (10, 340));
 			_energyPotion.SetY (_random.Next (115, 190));
-			//
+            //
 
+            SwinGame.StartTimer(_soundTime);
 			// STOVE
 			//2 table of stove
 			_tableOfStoves = new ZYTableOfStove [2];
@@ -73,7 +76,7 @@ namespace MyGame
 			_dustbin = SwinGame.CreateSprite (SwinGame.BitmapNamed ("sink"));
 			//
 
-			_player = new ZYPlayer ();
+			_player = new ZYEasyPlayer ();
 			_player.SetX (140);
 			_player.SetY (120);
 		}
@@ -103,7 +106,7 @@ namespace MyGame
 			set { _stove = value; }
 		}
 
-		public ZYPlayer Player {
+		public ZYEasyPlayer Player {
 			get { return _player; }
 			set { _player = value; }
 		}
@@ -160,23 +163,69 @@ namespace MyGame
 			}
 
 			//check collision between dining table and player. If the wish food match with the food hold by player, give the food to the customer. 
-			foreach (ZYDiningTable diningTable in _diningTables) {
-				if (SwinGame.SpriteCollision (_player.PlayerSprite, diningTable.Customer.CustomerSprite)) {
-					if (("small_" + _player.HoldingFoodName) == diningTable.Customer.WishName) {
-						diningTable.SetFood (diningTable.Customer.WishName);
-						diningTable.Waiting = false;
-						diningTable.Customer.WishName = "";
+			for (int k = 0; k<_diningTables.Length; k++) {
+				if (SwinGame.SpriteCollision (_player.PlayerSprite, _diningTables[k].Customer.CustomerSprite)) {
+                    hits[k] = true;
+                    notCorrects[k] = false;
+					if (("small_" + _player.HoldingFoodName) == _diningTables[k].Customer.WishName) {                       
+                        SwinGame.LoadSoundEffect("success.wav");
+                        SwinGame.PlaySoundEffect("success.wav");
+                        _diningTables[k].SetFood (_diningTables[k].Customer.WishName);
+                        _diningTables[k].Ticks = 41;
+                        _diningTables[k].Waiting = false;
+                        _diningTables[k].Customer.WishName = "";
 						_player.SetFood ("");
+                       
 					}
+                    else 
+                    {
+                        if (_player.HoldingFoodName == "")
+                        {
+
+                        }
+                        else
+                        {                            
+                            if ((SwinGame.TimerTicks(_soundTime) / 1000) > 3)
+                            {
+                                SwinGame.LoadSoundEffect("wrong.wav");
+                                SwinGame.PlaySoundEffect("wrong.wav");
+                                SwinGame.ResetTimer(_soundTime);
+                            }
+                        }
+                        notCorrects[k] = true;
+                    }
 				}
+                else
+                {
+                    hits[k] = false;
+                    notCorrects[k] = false;
+                }
 			}
+
+           /* for(int i = 0; i<hits.Length; i++)
+            {
+                if (hits[i] == true)
+                {
+                    if (notCorrects[i] == true)
+                    {
+                        if ((SwinGame.TimerTicks(_soundTime) / 1000) > 2)
+                        {
+                            SwinGame.LoadSoundEffect("error.wav");
+                            SwinGame.PlaySoundEffect("error.wav");
+
+                        }
+                    }
+                }
+            }*/
 
 			//check collision between energy ball and player. Refill energy if collision happen.
 			if (SwinGame.SpriteCollision (_energyPotion.EnergyPotionSprite, _player.PlayerSprite) && (_energyPotion.EnergyImage == "ball.png")) {
-				_player.Movement.Ticks += 30;
+                _player.SetFillingImage("lighting.png");
 				_energyPotion.ResetEnergyBall ();
 				SwinGame.StartTimer (_gameTime);
-			}
+                SwinGame.LoadSoundEffect("chargeEnergy.wav");
+                SwinGame.PlaySoundEffect("chargeEnergy.wav");
+            }
 
 			//If no energy ball exist then generate new energy ball after 5 second 
 			if ((SwinGame.TimerTicks (_gameTime) / 1000) > 5) {
@@ -187,6 +236,11 @@ namespace MyGame
 
 			//throw away holding food if collide with dustbin. 
 			if (SwinGame.SpriteCollision (_player.PlayerSprite, _dustbin)) {
+                if (_player.HoldingFoodName != "")
+                {
+                    SwinGame.LoadSoundEffect("drop.wav");
+                    SwinGame.PlaySoundEffect("drop.wav");
+                }
 				_player.SetFood ("");
 			}
 	}
