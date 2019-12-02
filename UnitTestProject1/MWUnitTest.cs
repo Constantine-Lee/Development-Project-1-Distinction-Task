@@ -83,5 +83,13 @@ namespace UnitTestProject1
             Assert.IsNotNull(mWMarioDiningTable);
             Assert.IsNotNull(mWMarioWoodenTable);
         }
+
+        [TestMethod]
+        public void TestSideBarMarioUpdate()
+        {
+            MWSideBarMarioUpdate mWSideBarMarioUpdate = new MWSideBarMarioUpdate();
+           
+            Assert.IsNotNull(mWSideBarMarioUpdate);
+        }
     }
 }
