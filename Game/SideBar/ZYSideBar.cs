@@ -27,7 +27,7 @@ namespace MyGame
 			_gameTime = SwinGame.CreateTimer ();
 			SwinGame.StartTimer (_gameTime);
 
-            winStar = 1;
+            winStar = 0;
 			_life = 6;
 			_gameLife = new ZYGameLife ();
 

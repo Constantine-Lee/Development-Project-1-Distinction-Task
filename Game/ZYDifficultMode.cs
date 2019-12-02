@@ -77,6 +77,7 @@ namespace MyGame
 
             if (ZYSideBar.winStar == 4)
             {
+                ZYEnd.winOrLose = true;
                 _viewManager.View = _viewManager.ZYEnd;
             }
         }

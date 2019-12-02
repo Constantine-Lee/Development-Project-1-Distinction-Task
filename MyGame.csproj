@@ -141,6 +141,9 @@
     <Content Include="Resources\images\lighting.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\loseBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\normalEmoji.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -166,6 +169,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\images\Tutorial-game-interface-001.jpg" />
+    <Content Include="Resources\images\winEnding.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\yellowStar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
