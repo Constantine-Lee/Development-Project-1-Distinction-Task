@@ -18,7 +18,7 @@ namespace MyGame
         /// <summary>
         /// Michael
         /// </summary>
-        private MWSideBarMarioUpdate _mariosideBar;*/
+        private MWSideBarMarioUpdate _mariosideBar;
 
         public MWMarioDiningTable()
         {

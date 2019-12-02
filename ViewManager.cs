@@ -12,6 +12,7 @@ namespace MyGame
         private BS_End _BSEnd;
         private ZYEnd _end;
         private MWEnd _MWEnd;
+        private MWMarioEnd _MWMarioEnd;
         private View _view;
         private ZYEasyMode _easyMode;
         private ZYMediumMode _mediumMode;
@@ -37,6 +38,7 @@ namespace MyGame
             _BSEnd = new BS_End(this);
             _end = new ZYEnd(this);
             _MWEnd = new MWEnd(this);
+            _MWMarioEnd = new MWMarioEnd(this);
             _easyMode = new ZYEasyMode(this);
             _mediumMode = new ZYMediumMode(this);
             _startMedium = new ZYStartMedium(this);
@@ -72,6 +74,7 @@ namespace MyGame
             _BSEnd.SetX(0);
             _end.SetX(0);
             _MWEnd.SetX(0);
+            _MWMarioEnd.SetX(0);
             _easyMode.SetX(0);
             _mediumMode.SetX(0);
             _startMedium.SetX(0);
@@ -95,6 +98,7 @@ namespace MyGame
             _BSEnd.SetY(0);
             _end.SetY(0);
             _MWEnd.SetY(0);
+            _MWMarioEnd.SetY(0);
             _easyMode.SetY(0);
             _mediumMode.SetY(0);
             _startMedium.SetY(0);
@@ -202,6 +206,11 @@ namespace MyGame
             set { _BSEnd = value; }
         }
 
+        public MWMarioEnd MWMarioEnd
+        {
+            get { return _MWMarioEnd; }
+            set { _MWMarioEnd = value; }
+        }
         public ZYMediumMode MediumMode
         {
             get { return _mediumMode; }
