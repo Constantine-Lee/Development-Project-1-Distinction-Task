@@ -23,10 +23,10 @@ namespace MyGame
 
             _btmBar = new ZYBottomBar();
 
-            _giveUpButton = new ZYButton("blue_button07.png");
+            _giveUpButton = new ZYButton("pauseButton.png");
             _giveUpButton.SetWidth(80);
             _giveUpButton.SetHeight(80);
-            _giveUpButton.SetText("Pause", 23);
+            _giveUpButton.SetText("Pause", 20);
 
             //Register for Observer Pattern
             foreach (ZYDiningTable diningTable in _servingArea.DiningTable)
@@ -75,7 +75,7 @@ namespace MyGame
             _servingArea.ProcessEvent();
             _sideBar.ProcessEvent();
 
-            if (SwinGame.TimerTicks(_gameTime) > 5)
+            if (SwinGame.TimerTicks(_gameTime) > 500)
             {
                 _ticks = _ticks + 1;
                 SwinGame.ResetTimer(_gameTime);
