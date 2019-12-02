@@ -51,7 +51,7 @@ namespace MyGame
         public void Draw(float x, float y)
         {
            // _statusBar.Draw(_ticks, x, y);
-            zYPlayerWish.Draw(100, x+15, y-25);
+            zYPlayerWish.Draw(100, x+40, y-15);
         }
 
         public void ProcessEvent(Sprite _player)
@@ -75,7 +75,7 @@ namespace MyGame
             {
                 _speed = 2.0;
             }
-            else _speed = 1.3;
+            else _speed = 2.0;
 
             Boundary(_player);
 

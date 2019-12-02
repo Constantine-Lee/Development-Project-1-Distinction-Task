@@ -75,6 +75,9 @@
     <Content Include="Resources\images\blackprogressbar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\blackThought.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\blueprogressbar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

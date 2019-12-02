@@ -18,8 +18,8 @@ namespace MyGame
             _statusBar = SwinGame.CreateSprite(SwinGame.BitmapNamed(emptyBar));
             timer = SwinGame.CreateTimer();
             //wish background
-            SwinGame.LoadBitmapNamed("wish", "wish.png");
-            _wishBackground = SwinGame.CreateSprite(SwinGame.BitmapNamed("wish"));
+            SwinGame.LoadBitmapNamed("blackThought.png", "blackThought.png");
+            _wishBackground = SwinGame.CreateSprite(SwinGame.BitmapNamed("blackThought.png"));
             //
         }
 
@@ -32,7 +32,7 @@ namespace MyGame
         public void SetX(float x)
         {
             SwinGame.SpriteSetX(_statusBar, x);
-            SwinGame.SpriteSetX(_wishBackground, x-13);
+            SwinGame.SpriteSetX(_wishBackground, x-10);
 
         }
 
