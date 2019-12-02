@@ -51,7 +51,7 @@ namespace MyGame
         public void Draw(float x, float y)
         {
            // _statusBar.Draw(_ticks, x, y);
-            zYPlayerWish.Draw(100, x+20, y-20);
+            zYPlayerWish.Draw(100, x+15, y-25);
         }
 
         public void ProcessEvent(Sprite _player)
@@ -69,7 +69,7 @@ namespace MyGame
 
             if (zYPlayerWish.Image == "tired.png")
             {
-                _speed = 0.8;
+                _speed = 1.1;
             }
             else if (zYPlayerWish.Image == "lighting.png")
             {

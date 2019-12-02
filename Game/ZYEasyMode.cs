@@ -75,9 +75,9 @@ namespace MyGame
             _servingArea.ProcessEvent();
             _sideBar.ProcessEvent();
 
-            if (SwinGame.TimerTicks(_gameTime) > 1)
+            if (SwinGame.TimerTicks(_gameTime) > 500)
             {
-                _ticks = _ticks + 100;
+                _ticks = _ticks + 1;
                 SwinGame.ResetTimer(_gameTime);
             }
 
@@ -116,7 +116,7 @@ namespace MyGame
             _servingArea.SetY(y);
             _btmBar.SetY(y + 280);
             _giveUpButton.SetY(y + 295);
-            _giveUpButton.SetTextPositionY(y + 315);
+            _giveUpButton.SetTextPositionY(y + 320);
 
             _statusBar.SetY(y + 30);
         }
