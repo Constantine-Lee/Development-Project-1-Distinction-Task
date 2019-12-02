@@ -184,6 +184,9 @@
     <Content Include="Resources\sounds\walking.ogg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\sounds\wrong.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BJ\End\BS_End.cs" />
@@ -226,9 +229,12 @@
     <Compile Include="Game\Serving Area\DiningTable\ZYDiningTable.cs" />
     <Compile Include="Game\Serving Area\DiningTable\ZYDiningTableManager.cs" />
     <Compile Include="Game\Serving Area\DiningTable\ZYWoodenTable.cs" />
+    <Compile Include="Game\Serving Area\Player\ZYEasyPlayer.cs" />
+    <Compile Include="Game\Serving Area\Player\ZYEasyPlayerMovement.cs" />
     <Compile Include="Game\Serving Area\Player\ZYEnergyBall.cs" />
     <Compile Include="Game\Serving Area\Player\ZYMovement.cs" />
     <Compile Include="Game\Serving Area\Player\ZYPlayer.cs" />
+    <Compile Include="Game\Serving Area\Player\ZYPlayerWish.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYStove.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYStoveManager.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYTableOfStove.cs" />

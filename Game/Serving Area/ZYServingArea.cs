@@ -10,14 +10,13 @@ namespace MyGame
         private Timer _soundTime;
 		private ZYEnergyBall _energyPotion;
         private Boolean[] hits = new Boolean[4];
-        private Boolean[] notCorrects = new Boolean[4];
-        private Boolean soundOnce = false;
+        private Boolean[] notCorrects = new Boolean[4];        
 
 		private Sprite _sky;
 		private Sprite _floor;
 		private Sprite _dustbin;
 
-		private ZYPlayer _player;
+		private ZYEasyPlayer _player;
 
 		private ZYTableOfStove [] _tableOfStoves;
 		private ZYDiningTable [] _diningTables;
@@ -77,7 +76,7 @@ namespace MyGame
 			_dustbin = SwinGame.CreateSprite (SwinGame.BitmapNamed ("sink"));
 			//
 
-			_player = new ZYPlayer ();
+			_player = new ZYEasyPlayer ();
 			_player.SetX (140);
 			_player.SetY (120);
 		}
@@ -107,7 +106,7 @@ namespace MyGame
 			set { _stove = value; }
 		}
 
-		public ZYPlayer Player {
+		public ZYEasyPlayer Player {
 			get { return _player; }
 			set { _player = value; }
 		}
@@ -185,12 +184,11 @@ namespace MyGame
 
                         }
                         else
-                        {
-                            
+                        {                            
                             if ((SwinGame.TimerTicks(_soundTime) / 1000) > 3)
                             {
-                                SwinGame.LoadSoundEffect("error.wav");
-                                SwinGame.PlaySoundEffect("error.wav");
+                                SwinGame.LoadSoundEffect("wrong.wav");
+                                SwinGame.PlaySoundEffect("wrong.wav");
                                 SwinGame.ResetTimer(_soundTime);
                             }
                         }
