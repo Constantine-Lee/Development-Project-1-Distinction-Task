@@ -75,7 +75,7 @@ namespace MyGame
                 }
             }
 
-            if (ZYSideBar.winStar == 4)
+            if (ZYSideBar.winStar == 3)
             {
                 ZYEnd.winOrLose = true;
                 SwinGame.LoadSoundEffect("victory.wav");

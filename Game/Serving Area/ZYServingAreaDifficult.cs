@@ -8,7 +8,7 @@ namespace MyGame
     {
         private Timer _gameTime;
         private Timer _soundTime;
-        private ZYEnergyBall _energyPotion;
+        private ZYPoop _energyPotion;
 
         private Sprite _sky;
         private Sprite _floor;
@@ -31,7 +31,7 @@ namespace MyGame
             _gameTime = SwinGame.CreateTimer();
             _soundTime = SwinGame.CreateTimer();
             // Random the first energy potion
-            _energyPotion = new ZYEnergyBall();
+            _energyPotion = new ZYPoop();
             _energyPotion.SetX(_random.Next(10, 340));
             _energyPotion.SetY(_random.Next(115, 190));
             //
@@ -205,9 +205,9 @@ namespace MyGame
             }
 
             //check collision between energy ball and player. Refill energy if collision happen.
-            if (SwinGame.SpriteCollision(_energyPotion.EnergyPotionSprite, _player.PlayerSprite) && (_energyPotion.EnergyImage == "ball.png"))
+            if (SwinGame.SpriteCollision(_energyPotion.EnergyPotionSprite, _player.PlayerSprite) && (_energyPotion.EnergyImage == "poop.png"))
             {
-                _player.Movement.Ticks += 30;
+                _player.Movement.Ticks -= 20;
                 _energyPotion.ResetEnergyBall();
                 SwinGame.StartTimer(_gameTime);
                 SwinGame.LoadSoundEffect("chargeEnergy.wav");

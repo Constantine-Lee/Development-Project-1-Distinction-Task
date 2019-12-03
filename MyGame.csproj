@@ -156,6 +156,9 @@
     <Content Include="Resources\images\pauseButton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\images\poop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\images\purpleStorm.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -265,6 +268,7 @@
     <Compile Include="Game\Serving Area\Player\ZYMovement.cs" />
     <Compile Include="Game\Serving Area\Player\ZYPlayer.cs" />
     <Compile Include="Game\Serving Area\Player\ZYPlayerWish.cs" />
+    <Compile Include="Game\Serving Area\Player\ZYPoop.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYStove.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYStoveManager.cs" />
     <Compile Include="Game\Serving Area\Stove\ZYTableOfStove.cs" />
